@@ -240,6 +240,9 @@
   <data name="Create" xml:space="preserve">
     <value>Create</value>
   </data>
+  <data name="CreatedAt" xml:space="preserve">
+    <value>CreatedAt</value>
+  </data>
   <data name="CurrentPassword" xml:space="preserve">
     <value>Current Password</value>
   </data>
@@ -254,6 +257,9 @@
   </data>
   <data name="DeleteConfirm" xml:space="preserve">
     <value>Are you sure to delete the {0}: {1}?</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
   </data>
   <data name="Document" xml:space="preserve">
     <value>Document</value>
@@ -405,6 +411,9 @@
   <data name="LastName" xml:space="preserve">
     <value>Last Name</value>
   </data>
+  <data name="LastUser" xml:space="preserve">
+    <value>LastUser</value>
+  </data>
   <data name="LeaveAndLoseChanges" xml:space="preserve">
     <value>Do you want to leave the page and lose your changes?</value>
   </data>
@@ -428,6 +437,9 @@
   </data>
   <data name="MailForwarding" xml:space="preserve">
     <value>Mail forwarding</value>
+  </data>
+  <data name="Manager" xml:space="preserve">
+    <value>Manager</value>
   </data>
   <data name="Match" xml:space="preserve">
     <value>Match</value>
@@ -612,6 +624,9 @@
   <data name="Square" xml:space="preserve">
     <value>Square</value>
   </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
   <data name="Subtitle" xml:space="preserve">
     <value>Soccer predictions app</value>
   </data>
@@ -635,6 +650,9 @@
   </data>
   <data name="Tournaments" xml:space="preserve">
     <value>Tournaments</value>
+  </data>
+  <data name="UpdatedAt" xml:space="preserve">
+    <value>UpdatedAt</value>
   </data>
   <data name="User" xml:space="preserve">
     <value>User</value>

@@ -240,6 +240,9 @@
   <data name="Create" xml:space="preserve">
     <value>Crear</value>
   </data>
+  <data name="CreatedAt" xml:space="preserve">
+    <value>Creado</value>
+  </data>
   <data name="CurrentPassword" xml:space="preserve">
     <value>Contraseña Actual</value>
   </data>
@@ -254,6 +257,9 @@
   </data>
   <data name="DeleteConfirm" xml:space="preserve">
     <value>¿Está seguro de borrar el {0}: {1}?</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Descripción</value>
   </data>
   <data name="Document" xml:space="preserve">
     <value>Documento</value>
@@ -405,6 +411,9 @@
   <data name="LastName" xml:space="preserve">
     <value>Apellidos</value>
   </data>
+  <data name="LastUser" xml:space="preserve">
+    <value>Último usuario</value>
+  </data>
   <data name="LeaveAndLoseChanges" xml:space="preserve">
     <value>¿Deseas abandonar la página y perder los cambios?</value>
   </data>
@@ -428,6 +437,9 @@
   </data>
   <data name="MailForwarding" xml:space="preserve">
     <value>Reenvío de correo</value>
+  </data>
+  <data name="Manager" xml:space="preserve">
+    <value>Gerente</value>
   </data>
   <data name="Match" xml:space="preserve">
     <value>Partido</value>
@@ -612,6 +624,9 @@
   <data name="Square" xml:space="preserve">
     <value>Cuadrada</value>
   </data>
+  <data name="Status" xml:space="preserve">
+    <value>Estado</value>
+  </data>
   <data name="Subtitle" xml:space="preserve">
     <value>Aplicación de pronosticos futboleros</value>
   </data>
@@ -635,6 +650,9 @@
   </data>
   <data name="Tournaments" xml:space="preserve">
     <value>Torneos</value>
+  </data>
+  <data name="UpdatedAt" xml:space="preserve">
+    <value>Actualizado</value>
   </data>
   <data name="User" xml:space="preserve">
     <value>Usuario</value>

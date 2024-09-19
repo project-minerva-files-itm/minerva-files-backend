@@ -358,6 +358,15 @@ namespace SharedLibrary.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a CreatedAt.
+        /// </summary>
+        internal static string CreatedAt {
+            get {
+                return ResourceManager.GetString("CreatedAt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Current Password.
         /// </summary>
         internal static string CurrentPassword {
@@ -399,6 +408,15 @@ namespace SharedLibrary.Resources {
         internal static string DeleteConfirm {
             get {
                 return ResourceManager.GetString("DeleteConfirm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Description.
+        /// </summary>
+        internal static string Description {
+            get {
+                return ResourceManager.GetString("Description", resourceCulture);
             }
         }
         
@@ -853,6 +871,15 @@ namespace SharedLibrary.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a LastUser.
+        /// </summary>
+        internal static string LastUser {
+            get {
+                return ResourceManager.GetString("LastUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Do you want to leave the page and lose your changes?.
         /// </summary>
         internal static string LeaveAndLoseChanges {
@@ -921,6 +948,15 @@ namespace SharedLibrary.Resources {
         internal static string MailForwarding {
             get {
                 return ResourceManager.GetString("MailForwarding", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Manager.
+        /// </summary>
+        internal static string Manager {
+            get {
+                return ResourceManager.GetString("Manager", resourceCulture);
             }
         }
         
@@ -1474,6 +1510,15 @@ namespace SharedLibrary.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Status.
+        /// </summary>
+        internal static string Status {
+            get {
+                return ResourceManager.GetString("Status", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Soccer predictions app.
         /// </summary>
         internal static string Subtitle {
@@ -1542,6 +1587,15 @@ namespace SharedLibrary.Resources {
         internal static string Tournaments {
             get {
                 return ResourceManager.GetString("Tournaments", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a UpdatedAt.
+        /// </summary>
+        internal static string UpdatedAt {
+            get {
+                return ResourceManager.GetString("UpdatedAt", resourceCulture);
             }
         }
         
