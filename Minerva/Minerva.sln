@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34902.65
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SettingsService", "SettingsService\SettingsService.csproj", "{AB884B5C-FC97-4295-B255-2DC1E60CF3B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SettingsService", "SettingsService\SettingsService.csproj", "{AB884B5C-FC97-4295-B255-2DC1E60CF3B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService", "OrderService\OrderService.csproj", "{0D56064D-8E17-4694-B18A-DC688A3097F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderService", "OrderService\OrderService.csproj", "{0D56064D-8E17-4694-B18A-DC688A3097F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SLAService", "SLAService\SLAService.csproj", "{6ACEB7D1-93D1-42EA-9EC8-63DB46139BB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SLAService", "SLAService\SLAService.csproj", "{6ACEB7D1-93D1-42EA-9EC8-63DB46139BB6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonServices", "CommonServices\CommonServices.csproj", "{89C05AC2-386A-4DF1-89FB-35AEA32EEAE9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonServices", "CommonServices\CommonServices.csproj", "{89C05AC2-386A-4DF1-89FB-35AEA32EEAE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedLibrary", "SharedLibrary\SharedLibrary.csproj", "{12C12E95-E318-4863-A2BB-75FCC24CDD8F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{89C05AC2-386A-4DF1-89FB-35AEA32EEAE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89C05AC2-386A-4DF1-89FB-35AEA32EEAE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89C05AC2-386A-4DF1-89FB-35AEA32EEAE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12C12E95-E318-4863-A2BB-75FCC24CDD8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12C12E95-E318-4863-A2BB-75FCC24CDD8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12C12E95-E318-4863-A2BB-75FCC24CDD8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12C12E95-E318-4863-A2BB-75FCC24CDD8F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
