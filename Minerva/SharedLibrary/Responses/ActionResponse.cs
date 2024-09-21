@@ -2,29 +2,29 @@
 {
     public class ActionResponse<T>
     {
-        public bool WasSuccess { get; private set; }
+        public bool WasSuccess { get; private set; } = true;
         public string? Message { get; private set; }
         public T? Result { get; private set; }
 
         private ActionResponse() { }
 
-        public class Builder
+        public class ActionResponseBuilder
         {
             private readonly ActionResponse<T> _response = new();
 
-            public Builder SetSuccess(bool wasSuccess)
+            public ActionResponseBuilder SetSuccess(bool wasSuccess)
             {
                 _response.WasSuccess = wasSuccess;
                 return this;
             }
 
-            public Builder SetMessage(string message)
+            public ActionResponseBuilder SetMessage(string message)
             {
                 _response.Message = message;
                 return this;
             }
 
-            public Builder SetResult(T result)
+            public ActionResponseBuilder SetResult(T result)
             {
                 _response.Result = result;
                 return this;

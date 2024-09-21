@@ -1,9 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using SharedLibrary.Data;
 using SharedLibrary.Entities;
 
 namespace SettingsService.Data
 {
-    public class DataContext : DbContext
+    public class DataContext : DbContext , IDataConext
     {
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
@@ -24,6 +25,17 @@ namespace SettingsService.Data
             {
                 relationship.DeleteBehavior = DeleteBehavior.Restrict;
             }
+        }
+
+
+        public void AddEntity<T>(T entity) where T : class
+        {
+            Set<T>().Add(entity);
+        }
+
+        public async Task<int> SaveAsync(CancellationToken cancellationToken = default)
+        {
+            return await base.SaveChangesAsync(cancellationToken);
         }
     }
 }

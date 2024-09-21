@@ -22,7 +22,7 @@ namespace SharedLibrary.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Literals {
+    public class Literals {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace SharedLibrary.Resources {
         ///   Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SharedLibrary.Resources.Literals", typeof(Literals).Assembly);
@@ -51,7 +51,7 @@ namespace SharedLibrary.Resources {
         ///   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a About.
         /// </summary>
-        internal static string About {
+        public static string About {
             get {
                 return ResourceManager.GetString("About", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a     &lt;p&gt;A system where different groups of friends can make predictions about football tournaments. In Colombia, it’s called “Polla”; in Argentina, “Prode”; and in the United States, “Fantasy.” The idea is that any number of football tournaments, such as the Copa América, the World Cup, the Euro Cup, the Champions League, or the Colombian League, among others, can be registered. Groups of friends will be able to form their own “Pollas” and make predictions about the matches. Once the matches are completed an [resto de la cadena truncado]&quot;;.
         /// </summary>
-        internal static string AboutText {
+        public static string AboutText {
             get {
                 return ResourceManager.GetString("AboutText", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Actions.
         /// </summary>
-        internal static string Actions {
+        public static string Actions {
             get {
                 return ResourceManager.GetString("Actions", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Activate.
         /// </summary>
-        internal static string Activate {
+        public static string Activate {
             get {
                 return ResourceManager.GetString("Activate", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Active.
         /// </summary>
-        internal static string Active {
+        public static string Active {
             get {
                 return ResourceManager.GetString("Active", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Add.
         /// </summary>
-        internal static string Add {
+        public static string Add {
             get {
                 return ResourceManager.GetString("Add", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Add Match to Tournament.
         /// </summary>
-        internal static string AddMatchToTournament {
+        public static string AddMatchToTournament {
             get {
                 return ResourceManager.GetString("AddMatchToTournament", resourceCulture);
             }
@@ -126,7 +126,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Address.
         /// </summary>
-        internal static string Address {
+        public static string Address {
             get {
                 return ResourceManager.GetString("Address", resourceCulture);
             }
@@ -135,7 +135,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Add Team.
         /// </summary>
-        internal static string AddTeam {
+        public static string AddTeam {
             get {
                 return ResourceManager.GetString("AddTeam", resourceCulture);
             }
@@ -144,7 +144,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Add Team to Tournament.
         /// </summary>
-        internal static string AddTeamToTournament {
+        public static string AddTeamToTournament {
             get {
                 return ResourceManager.GetString("AddTeamToTournament", resourceCulture);
             }
@@ -153,7 +153,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Admin.
         /// </summary>
-        internal static string Admin {
+        public static string Admin {
             get {
                 return ResourceManager.GetString("Admin", resourceCulture);
             }
@@ -162,7 +162,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Administrator Registration.
         /// </summary>
-        internal static string AdminRegister {
+        public static string AdminRegister {
             get {
                 return ResourceManager.GetString("AdminRegister", resourceCulture);
             }
@@ -171,7 +171,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Admin users group.
         /// </summary>
-        internal static string AdminUsersGroup {
+        public static string AdminUsersGroup {
             get {
                 return ResourceManager.GetString("AdminUsersGroup", resourceCulture);
             }
@@ -180,7 +180,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a All.
         /// </summary>
-        internal static string All {
+        public static string All {
             get {
                 return ResourceManager.GetString("All", resourceCulture);
             }
@@ -189,7 +189,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Author.
         /// </summary>
-        internal static string Author {
+        public static string Author {
             get {
                 return ResourceManager.GetString("Author", resourceCulture);
             }
@@ -198,7 +198,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Authorizing....
         /// </summary>
-        internal static string Authorizing {
+        public static string Authorizing {
             get {
                 return ResourceManager.GetString("Authorizing", resourceCulture);
             }
@@ -207,7 +207,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Cancel.
         /// </summary>
-        internal static string Cancel {
+        public static string Cancel {
             get {
                 return ResourceManager.GetString("Cancel", resourceCulture);
             }
@@ -216,7 +216,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Change Password.
         /// </summary>
-        internal static string ChangePassword {
+        public static string ChangePassword {
             get {
                 return ResourceManager.GetString("ChangePassword", resourceCulture);
             }
@@ -225,7 +225,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Clean.
         /// </summary>
-        internal static string Clean {
+        public static string Clean {
             get {
                 return ResourceManager.GetString("Clean", resourceCulture);
             }
@@ -234,7 +234,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Close Match.
         /// </summary>
-        internal static string CloseMatch {
+        public static string CloseMatch {
             get {
                 return ResourceManager.GetString("CloseMatch", resourceCulture);
             }
@@ -243,7 +243,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Are you sure you want to close the match {0} Vs. {1}?.
         /// </summary>
-        internal static string CloseMatchConfirmMessage {
+        public static string CloseMatchConfirmMessage {
             get {
                 return ResourceManager.GetString("CloseMatchConfirmMessage", resourceCulture);
             }
@@ -252,7 +252,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Close Match.
         /// </summary>
-        internal static string CloseMatchTitle {
+        public static string CloseMatchTitle {
             get {
                 return ResourceManager.GetString("CloseMatchTitle", resourceCulture);
             }
@@ -261,7 +261,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Code.
         /// </summary>
-        internal static string Code {
+        public static string Code {
             get {
                 return ResourceManager.GetString("Code", resourceCulture);
             }
@@ -270,7 +270,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Confirmation.
         /// </summary>
-        internal static string Confirmation {
+        public static string Confirmation {
             get {
                 return ResourceManager.GetString("Confirmation", resourceCulture);
             }
@@ -279,7 +279,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Confirmed.
         /// </summary>
-        internal static string Confirmed {
+        public static string Confirmed {
             get {
                 return ResourceManager.GetString("Confirmed", resourceCulture);
             }
@@ -288,7 +288,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Thank you for confirming your email, you can now log in to the system..
         /// </summary>
-        internal static string ConfirmedEmailMessage {
+        public static string ConfirmedEmailMessage {
             get {
                 return ResourceManager.GetString("ConfirmedEmailMessage", resourceCulture);
             }
@@ -297,7 +297,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Email confirmation.
         /// </summary>
-        internal static string ConfirmEmail {
+        public static string ConfirmEmail {
             get {
                 return ResourceManager.GetString("ConfirmEmail", resourceCulture);
             }
@@ -306,7 +306,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Press the button to confirm your account..
         /// </summary>
-        internal static string ConfirmEmailMessage {
+        public static string ConfirmEmailMessage {
             get {
                 return ResourceManager.GetString("ConfirmEmailMessage", resourceCulture);
             }
@@ -315,7 +315,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a To join the group: {0}, click the button..
         /// </summary>
-        internal static string ConfirmGroupMessage {
+        public static string ConfirmGroupMessage {
             get {
                 return ResourceManager.GetString("ConfirmGroupMessage", resourceCulture);
             }
@@ -324,7 +324,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Copy invitation.
         /// </summary>
-        internal static string CopyInvitationURLTitle {
+        public static string CopyInvitationURLTitle {
             get {
                 return ResourceManager.GetString("CopyInvitationURLTitle", resourceCulture);
             }
@@ -333,7 +333,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Countries.
         /// </summary>
-        internal static string Countries {
+        public static string Countries {
             get {
                 return ResourceManager.GetString("Countries", resourceCulture);
             }
@@ -342,7 +342,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Country.
         /// </summary>
-        internal static string Country {
+        public static string Country {
             get {
                 return ResourceManager.GetString("Country", resourceCulture);
             }
@@ -351,7 +351,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Create.
         /// </summary>
-        internal static string Create {
+        public static string Create {
             get {
                 return ResourceManager.GetString("Create", resourceCulture);
             }
@@ -360,7 +360,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a CreatedAt.
         /// </summary>
-        internal static string CreatedAt {
+        public static string CreatedAt {
             get {
                 return ResourceManager.GetString("CreatedAt", resourceCulture);
             }
@@ -369,7 +369,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Current Password.
         /// </summary>
-        internal static string CurrentPassword {
+        public static string CurrentPassword {
             get {
                 return ResourceManager.GetString("CurrentPassword", resourceCulture);
             }
@@ -378,7 +378,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Date.
         /// </summary>
-        internal static string Date {
+        public static string Date {
             get {
                 return ResourceManager.GetString("Date", resourceCulture);
             }
@@ -387,7 +387,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Deactivate.
         /// </summary>
-        internal static string Deactivate {
+        public static string Deactivate {
             get {
                 return ResourceManager.GetString("Deactivate", resourceCulture);
             }
@@ -396,7 +396,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Delete.
         /// </summary>
-        internal static string Delete {
+        public static string Delete {
             get {
                 return ResourceManager.GetString("Delete", resourceCulture);
             }
@@ -405,7 +405,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Are you sure to delete the {0}: {1}?.
         /// </summary>
-        internal static string DeleteConfirm {
+        public static string DeleteConfirm {
             get {
                 return ResourceManager.GetString("DeleteConfirm", resourceCulture);
             }
@@ -414,7 +414,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Description.
         /// </summary>
-        internal static string Description {
+        public static string Description {
             get {
                 return ResourceManager.GetString("Description", resourceCulture);
             }
@@ -423,7 +423,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Document.
         /// </summary>
-        internal static string Document {
+        public static string Document {
             get {
                 return ResourceManager.GetString("Document", resourceCulture);
             }
@@ -432,7 +432,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Double Points.
         /// </summary>
-        internal static string DoublePoints {
+        public static string DoublePoints {
             get {
                 return ResourceManager.GetString("DoublePoints", resourceCulture);
             }
@@ -441,7 +441,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Double Points Match.
         /// </summary>
-        internal static string DoublePointsMatchMessage {
+        public static string DoublePointsMatchMessage {
             get {
                 return ResourceManager.GetString("DoublePointsMatchMessage", resourceCulture);
             }
@@ -450,7 +450,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Edit.
         /// </summary>
-        internal static string Edit {
+        public static string Edit {
             get {
                 return ResourceManager.GetString("Edit", resourceCulture);
             }
@@ -459,7 +459,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Edit User Profile.
         /// </summary>
-        internal static string EditUserProfile {
+        public static string EditUserProfile {
             get {
                 return ResourceManager.GetString("EditUserProfile", resourceCulture);
             }
@@ -468,7 +468,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Email.
         /// </summary>
-        internal static string Email {
+        public static string Email {
             get {
                 return ResourceManager.GetString("Email", resourceCulture);
             }
@@ -477,7 +477,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a The email you entered already exists..
         /// </summary>
-        internal static string EmailAlreadyExists {
+        public static string EmailAlreadyExists {
             get {
                 return ResourceManager.GetString("EmailAlreadyExists", resourceCulture);
             }
@@ -486,7 +486,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a English.
         /// </summary>
-        internal static string English {
+        public static string English {
             get {
                 return ResourceManager.GetString("English", resourceCulture);
             }
@@ -495,7 +495,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Record not found..
         /// </summary>
-        internal static string ERR001 {
+        public static string ERR001 {
             get {
                 return ResourceManager.GetString("ERR001", resourceCulture);
             }
@@ -504,7 +504,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Cannot be deleted because it has related records..
         /// </summary>
-        internal static string ERR002 {
+        public static string ERR002 {
             get {
                 return ResourceManager.GetString("ERR002", resourceCulture);
             }
@@ -513,7 +513,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a The record you are trying to create already exists..
         /// </summary>
-        internal static string ERR003 {
+        public static string ERR003 {
             get {
                 return ResourceManager.GetString("ERR003", resourceCulture);
             }
@@ -522,7 +522,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a The country Id is not valid..
         /// </summary>
-        internal static string ERR004 {
+        public static string ERR004 {
             get {
                 return ResourceManager.GetString("ERR004", resourceCulture);
             }
@@ -531,7 +531,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a The team Id is not valid..
         /// </summary>
-        internal static string ERR005 {
+        public static string ERR005 {
             get {
                 return ResourceManager.GetString("ERR005", resourceCulture);
             }
@@ -540,7 +540,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Incorrect email or password..
         /// </summary>
-        internal static string ERR006 {
+        public static string ERR006 {
             get {
                 return ResourceManager.GetString("ERR006", resourceCulture);
             }
@@ -549,7 +549,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a You have exceeded the maximum number of attempts, your account is blocked, please try again in 5 minutes..
         /// </summary>
-        internal static string ERR007 {
+        public static string ERR007 {
             get {
                 return ResourceManager.GetString("ERR007", resourceCulture);
             }
@@ -558,7 +558,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a The user has not been enabled, you must follow the instructions in the email sent to enable the user..
         /// </summary>
-        internal static string ERR008 {
+        public static string ERR008 {
             get {
                 return ResourceManager.GetString("ERR008", resourceCulture);
             }
@@ -567,7 +567,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a The tournament Id is not valid..
         /// </summary>
-        internal static string ERR009 {
+        public static string ERR009 {
             get {
                 return ResourceManager.GetString("ERR009", resourceCulture);
             }
@@ -576,7 +576,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a The local Id is not valid..
         /// </summary>
-        internal static string ERR010 {
+        public static string ERR010 {
             get {
                 return ResourceManager.GetString("ERR010", resourceCulture);
             }
@@ -585,7 +585,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a The visitor Id is not valid..
         /// </summary>
-        internal static string ERR011 {
+        public static string ERR011 {
             get {
                 return ResourceManager.GetString("ERR011", resourceCulture);
             }
@@ -594,7 +594,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a The match Id is not valid..
         /// </summary>
-        internal static string ERR012 {
+        public static string ERR012 {
             get {
                 return ResourceManager.GetString("ERR012", resourceCulture);
             }
@@ -603,7 +603,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a The user Id is not valid..
         /// </summary>
-        internal static string ERR013 {
+        public static string ERR013 {
             get {
                 return ResourceManager.GetString("ERR013", resourceCulture);
             }
@@ -612,7 +612,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a The group Id is not valid..
         /// </summary>
-        internal static string ERR014 {
+        public static string ERR014 {
             get {
                 return ResourceManager.GetString("ERR014", resourceCulture);
             }
@@ -621,7 +621,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a The user group is not valid..
         /// </summary>
-        internal static string ERR015 {
+        public static string ERR015 {
             get {
                 return ResourceManager.GetString("ERR015", resourceCulture);
             }
@@ -630,7 +630,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a The prediction Id is not valid..
         /// </summary>
-        internal static string ERR016 {
+        public static string ERR016 {
             get {
                 return ResourceManager.GetString("ERR016", resourceCulture);
             }
@@ -639,7 +639,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a The group code is not valid..
         /// </summary>
-        internal static string ERR017 {
+        public static string ERR017 {
             get {
                 return ResourceManager.GetString("ERR017", resourceCulture);
             }
@@ -648,7 +648,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a This match is no longer open to predictions..
         /// </summary>
-        internal static string ERR018 {
+        public static string ERR018 {
             get {
                 return ResourceManager.GetString("ERR018", resourceCulture);
             }
@@ -657,7 +657,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Error.
         /// </summary>
-        internal static string Error {
+        public static string Error {
             get {
                 return ResourceManager.GetString("Error", resourceCulture);
             }
@@ -666,7 +666,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Filter.
         /// </summary>
-        internal static string Filter {
+        public static string Filter {
             get {
                 return ResourceManager.GetString("Filter", resourceCulture);
             }
@@ -675,7 +675,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a First Name.
         /// </summary>
-        internal static string FirstName {
+        public static string FirstName {
             get {
                 return ResourceManager.GetString("FirstName", resourceCulture);
             }
@@ -684,7 +684,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Have you forgotten your password?.
         /// </summary>
-        internal static string ForgottenYourPassword {
+        public static string ForgottenYourPassword {
             get {
                 return ResourceManager.GetString("ForgottenYourPassword", resourceCulture);
             }
@@ -693,7 +693,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Goals Local.
         /// </summary>
-        internal static string GoalsLocal {
+        public static string GoalsLocal {
             get {
                 return ResourceManager.GetString("GoalsLocal", resourceCulture);
             }
@@ -702,7 +702,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a You must enter a value greater than or equal to zero in local goals..
         /// </summary>
-        internal static string GoalsLocalError {
+        public static string GoalsLocalError {
             get {
                 return ResourceManager.GetString("GoalsLocalError", resourceCulture);
             }
@@ -711,7 +711,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Goals Visitor.
         /// </summary>
-        internal static string GoalsVisitor {
+        public static string GoalsVisitor {
             get {
                 return ResourceManager.GetString("GoalsVisitor", resourceCulture);
             }
@@ -720,7 +720,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a You must enter a value greater than or equal to zero in visitor goals..
         /// </summary>
-        internal static string GoalsVisitorError {
+        public static string GoalsVisitorError {
             get {
                 return ResourceManager.GetString("GoalsVisitorError", resourceCulture);
             }
@@ -729,7 +729,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Group.
         /// </summary>
-        internal static string Group {
+        public static string Group {
             get {
                 return ResourceManager.GetString("Group", resourceCulture);
             }
@@ -738,7 +738,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Group: {0} has been created, with code: {1}, Invitation URL {2} has been copied to clipboard, please share it with your friends to join your group..
         /// </summary>
-        internal static string GroupCreated {
+        public static string GroupCreated {
             get {
                 return ResourceManager.GetString("GroupCreated", resourceCulture);
             }
@@ -747,7 +747,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Group Details.
         /// </summary>
-        internal static string GroupDetails {
+        public static string GroupDetails {
             get {
                 return ResourceManager.GetString("GroupDetails", resourceCulture);
             }
@@ -756,7 +756,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Groups.
         /// </summary>
-        internal static string Groups {
+        public static string Groups {
             get {
                 return ResourceManager.GetString("Groups", resourceCulture);
             }
@@ -765,7 +765,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Hello.
         /// </summary>
-        internal static string Hello {
+        public static string Hello {
             get {
                 return ResourceManager.GetString("Hello", resourceCulture);
             }
@@ -774,7 +774,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Home.
         /// </summary>
-        internal static string Home {
+        public static string Home {
             get {
                 return ResourceManager.GetString("Home", resourceCulture);
             }
@@ -783,7 +783,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Image.
         /// </summary>
-        internal static string Image {
+        public static string Image {
             get {
                 return ResourceManager.GetString("Image", resourceCulture);
             }
@@ -792,7 +792,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a The image is rectangular.
         /// </summary>
-        internal static string ImageIsRectangular {
+        public static string ImageIsRectangular {
             get {
                 return ResourceManager.GetString("ImageIsRectangular", resourceCulture);
             }
@@ -801,7 +801,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a The image is square.
         /// </summary>
-        internal static string ImageIsSquare {
+        public static string ImageIsSquare {
             get {
                 return ResourceManager.GetString("ImageIsSquare", resourceCulture);
             }
@@ -810,7 +810,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Inactive.
         /// </summary>
-        internal static string Inactive {
+        public static string Inactive {
             get {
                 return ResourceManager.GetString("Inactive", resourceCulture);
             }
@@ -819,7 +819,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Group invitation link {0} copied to clipboard. Share it with your friends to join the group..
         /// </summary>
-        internal static string InvitationURLCopied {
+        public static string InvitationURLCopied {
             get {
                 return ResourceManager.GetString("InvitationURLCopied", resourceCulture);
             }
@@ -828,7 +828,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Is Active.
         /// </summary>
-        internal static string IsActive {
+        public static string IsActive {
             get {
                 return ResourceManager.GetString("IsActive", resourceCulture);
             }
@@ -837,7 +837,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Is Image Square?.
         /// </summary>
-        internal static string IsImageSquare {
+        public static string IsImageSquare {
             get {
                 return ResourceManager.GetString("IsImageSquare", resourceCulture);
             }
@@ -846,7 +846,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Join an existing group.
         /// </summary>
-        internal static string JoinExistingGroup {
+        public static string JoinExistingGroup {
             get {
                 return ResourceManager.GetString("JoinExistingGroup", resourceCulture);
             }
@@ -855,7 +855,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Join Group.
         /// </summary>
-        internal static string JoinGroup {
+        public static string JoinGroup {
             get {
                 return ResourceManager.GetString("JoinGroup", resourceCulture);
             }
@@ -864,7 +864,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Last Name.
         /// </summary>
-        internal static string LastName {
+        public static string LastName {
             get {
                 return ResourceManager.GetString("LastName", resourceCulture);
             }
@@ -873,7 +873,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a LastUser.
         /// </summary>
-        internal static string LastUser {
+        public static string LastUser {
             get {
                 return ResourceManager.GetString("LastUser", resourceCulture);
             }
@@ -882,7 +882,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Do you want to leave the page and lose your changes?.
         /// </summary>
-        internal static string LeaveAndLoseChanges {
+        public static string LeaveAndLoseChanges {
             get {
                 return ResourceManager.GetString("LeaveAndLoseChanges", resourceCulture);
             }
@@ -891,7 +891,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Field {0} must be between {2} and {1} characters..
         /// </summary>
-        internal static string LengthField {
+        public static string LengthField {
             get {
                 return ResourceManager.GetString("LengthField", resourceCulture);
             }
@@ -900,7 +900,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Local.
         /// </summary>
-        internal static string Local {
+        public static string Local {
             get {
                 return ResourceManager.GetString("Local", resourceCulture);
             }
@@ -909,7 +909,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Login.
         /// </summary>
-        internal static string Login {
+        public static string Login {
             get {
                 return ResourceManager.GetString("Login", resourceCulture);
             }
@@ -918,7 +918,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Logout.
         /// </summary>
-        internal static string Logout {
+        public static string Logout {
             get {
                 return ResourceManager.GetString("Logout", resourceCulture);
             }
@@ -927,7 +927,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Are you sure you want to log out?.
         /// </summary>
-        internal static string LogoutConfirm {
+        public static string LogoutConfirm {
             get {
                 return ResourceManager.GetString("LogoutConfirm", resourceCulture);
             }
@@ -936,7 +936,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a If you log out, you will need to log back in to access your account..
         /// </summary>
-        internal static string LogoutMessage {
+        public static string LogoutMessage {
             get {
                 return ResourceManager.GetString("LogoutMessage", resourceCulture);
             }
@@ -945,7 +945,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Mail forwarding.
         /// </summary>
-        internal static string MailForwarding {
+        public static string MailForwarding {
             get {
                 return ResourceManager.GetString("MailForwarding", resourceCulture);
             }
@@ -954,7 +954,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Manager.
         /// </summary>
-        internal static string Manager {
+        public static string Manager {
             get {
                 return ResourceManager.GetString("Manager", resourceCulture);
             }
@@ -963,7 +963,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Match.
         /// </summary>
-        internal static string Match {
+        public static string Match {
             get {
                 return ResourceManager.GetString("Match", resourceCulture);
             }
@@ -972,7 +972,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Match Active.
         /// </summary>
-        internal static string MatchActive {
+        public static string MatchActive {
             get {
                 return ResourceManager.GetString("MatchActive", resourceCulture);
             }
@@ -981,7 +981,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Matches.
         /// </summary>
-        internal static string Matches {
+        public static string Matches {
             get {
                 return ResourceManager.GetString("Matches", resourceCulture);
             }
@@ -990,7 +990,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Match Inactive.
         /// </summary>
-        internal static string MatchInactive {
+        public static string MatchInactive {
             get {
                 return ResourceManager.GetString("MatchInactive", resourceCulture);
             }
@@ -999,7 +999,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Field {0} cannot be longer than {1} characters..
         /// </summary>
-        internal static string MaxLength {
+        public static string MaxLength {
             get {
                 return ResourceManager.GetString("MaxLength", resourceCulture);
             }
@@ -1008,7 +1008,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Members.
         /// </summary>
-        internal static string Members {
+        public static string Members {
             get {
                 return ResourceManager.GetString("Members", resourceCulture);
             }
@@ -1017,7 +1017,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a The {0} field must have at least {1} characters..
         /// </summary>
-        internal static string MinLength {
+        public static string MinLength {
             get {
                 return ResourceManager.GetString("MinLength", resourceCulture);
             }
@@ -1026,7 +1026,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a You must select a local team..
         /// </summary>
-        internal static string MustSelectLocalTeam {
+        public static string MustSelectLocalTeam {
             get {
                 return ResourceManager.GetString("MustSelectLocalTeam", resourceCulture);
             }
@@ -1035,7 +1035,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a You must select a visitor team..
         /// </summary>
-        internal static string MustSelectVisitorTeam {
+        public static string MustSelectVisitorTeam {
             get {
                 return ResourceManager.GetString("MustSelectVisitorTeam", resourceCulture);
             }
@@ -1044,7 +1044,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a My Groups.
         /// </summary>
-        internal static string MyGroups {
+        public static string MyGroups {
             get {
                 return ResourceManager.GetString("MyGroups", resourceCulture);
             }
@@ -1053,7 +1053,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Name.
         /// </summary>
-        internal static string Name {
+        public static string Name {
             get {
                 return ResourceManager.GetString("Name", resourceCulture);
             }
@@ -1062,7 +1062,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a New.
         /// </summary>
-        internal static string New {
+        public static string New {
             get {
                 return ResourceManager.GetString("New", resourceCulture);
             }
@@ -1071,7 +1071,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a New Password.
         /// </summary>
-        internal static string NewPassword {
+        public static string NewPassword {
             get {
                 return ResourceManager.GetString("NewPassword", resourceCulture);
             }
@@ -1080,7 +1080,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a No.
         /// </summary>
-        internal static string No {
+        public static string No {
             get {
                 return ResourceManager.GetString("No", resourceCulture);
             }
@@ -1089,7 +1089,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a You are not part of any group. You can join a group using the URL or code shared by the group administrator, or you can view the available groups on the homepage and then ask the administrator to activate you so you can enter your predictions. You can also create your own group of friends..
         /// </summary>
-        internal static string NoGroups {
+        public static string NoGroups {
             get {
                 return ResourceManager.GetString("NoGroups", resourceCulture);
             }
@@ -1098,7 +1098,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a No records to show....
         /// </summary>
-        internal static string NoRecords {
+        public static string NoRecords {
             get {
                 return ResourceManager.GetString("NoRecords", resourceCulture);
             }
@@ -1107,7 +1107,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a You are not authorized to view this content....
         /// </summary>
-        internal static string NotAuthorized {
+        public static string NotAuthorized {
             get {
                 return ResourceManager.GetString("NotAuthorized", resourceCulture);
             }
@@ -1116,7 +1116,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Not Found.
         /// </summary>
-        internal static string NotFound {
+        public static string NotFound {
             get {
                 return ResourceManager.GetString("NotFound", resourceCulture);
             }
@@ -1125,7 +1125,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Sorry, there is nothing on this route..
         /// </summary>
-        internal static string NothingInRoute {
+        public static string NothingInRoute {
             get {
                 return ResourceManager.GetString("NothingInRoute", resourceCulture);
             }
@@ -1134,7 +1134,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Not a user yet? Register here.
         /// </summary>
-        internal static string NotUserYet {
+        public static string NotUserYet {
             get {
                 return ResourceManager.GetString("NotUserYet", resourceCulture);
             }
@@ -1143,7 +1143,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Number of employees.
         /// </summary>
-        internal static string NumberEmployees {
+        public static string NumberEmployees {
             get {
                 return ResourceManager.GetString("NumberEmployees", resourceCulture);
             }
@@ -1152,7 +1152,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Password.
         /// </summary>
-        internal static string Password {
+        public static string Password {
             get {
                 return ResourceManager.GetString("Password", resourceCulture);
             }
@@ -1161,7 +1161,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a The password and confirmation are not the same..
         /// </summary>
-        internal static string PasswordAndConfirmationDifferent {
+        public static string PasswordAndConfirmationDifferent {
             get {
                 return ResourceManager.GetString("PasswordAndConfirmationDifferent", resourceCulture);
             }
@@ -1170,7 +1170,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Password Changed Successfully..
         /// </summary>
-        internal static string PasswordChangedSuccessfully {
+        public static string PasswordChangedSuccessfully {
             get {
                 return ResourceManager.GetString("PasswordChangedSuccessfully", resourceCulture);
             }
@@ -1179,7 +1179,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Password Confirm.
         /// </summary>
-        internal static string PasswordConfirm {
+        public static string PasswordConfirm {
             get {
                 return ResourceManager.GetString("PasswordConfirm", resourceCulture);
             }
@@ -1188,7 +1188,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Password changed successfully, you can now log in with your new password..
         /// </summary>
-        internal static string PasswordRecoveredMessage {
+        public static string PasswordRecoveredMessage {
             get {
                 return ResourceManager.GetString("PasswordRecoveredMessage", resourceCulture);
             }
@@ -1197,7 +1197,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Password Recovery.
         /// </summary>
-        internal static string PasswordRecovery {
+        public static string PasswordRecovery {
             get {
                 return ResourceManager.GetString("PasswordRecovery", resourceCulture);
             }
@@ -1206,7 +1206,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Phone.
         /// </summary>
-        internal static string Phone {
+        public static string Phone {
             get {
                 return ResourceManager.GetString("Phone", resourceCulture);
             }
@@ -1215,7 +1215,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Phone Number.
         /// </summary>
-        internal static string PhoneNumber {
+        public static string PhoneNumber {
             get {
                 return ResourceManager.GetString("PhoneNumber", resourceCulture);
             }
@@ -1224,7 +1224,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Please wait....
         /// </summary>
-        internal static string PleaseWait {
+        public static string PleaseWait {
             get {
                 return ResourceManager.GetString("PleaseWait", resourceCulture);
             }
@@ -1233,7 +1233,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Points.
         /// </summary>
-        internal static string Points {
+        public static string Points {
             get {
                 return ResourceManager.GetString("Points", resourceCulture);
             }
@@ -1242,7 +1242,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Positions.
         /// </summary>
-        internal static string Positions {
+        public static string Positions {
             get {
                 return ResourceManager.GetString("Positions", resourceCulture);
             }
@@ -1251,7 +1251,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a PredictedScore.
         /// </summary>
-        internal static string PredictedScore {
+        public static string PredictedScore {
             get {
                 return ResourceManager.GetString("PredictedScore", resourceCulture);
             }
@@ -1260,7 +1260,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Prediction.
         /// </summary>
-        internal static string Prediction {
+        public static string Prediction {
             get {
                 return ResourceManager.GetString("Prediction", resourceCulture);
             }
@@ -1269,7 +1269,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Predictions.
         /// </summary>
-        internal static string Predictions {
+        public static string Predictions {
             get {
                 return ResourceManager.GetString("Predictions", resourceCulture);
             }
@@ -1278,7 +1278,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Predictions Balance.
         /// </summary>
-        internal static string PredictionsBalance {
+        public static string PredictionsBalance {
             get {
                 return ResourceManager.GetString("PredictionsBalance", resourceCulture);
             }
@@ -1287,7 +1287,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Real Score.
         /// </summary>
-        internal static string RealScore {
+        public static string RealScore {
             get {
                 return ResourceManager.GetString("RealScore", resourceCulture);
             }
@@ -1296,7 +1296,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Record created successfully..
         /// </summary>
-        internal static string RecordCreatedOk {
+        public static string RecordCreatedOk {
             get {
                 return ResourceManager.GetString("RecordCreatedOk", resourceCulture);
             }
@@ -1305,7 +1305,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Record deleted successfully..
         /// </summary>
-        internal static string RecordDeletedOk {
+        public static string RecordDeletedOk {
             get {
                 return ResourceManager.GetString("RecordDeletedOk", resourceCulture);
             }
@@ -1314,7 +1314,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Record saved successfully..
         /// </summary>
-        internal static string RecordSavedOk {
+        public static string RecordSavedOk {
             get {
                 return ResourceManager.GetString("RecordSavedOk", resourceCulture);
             }
@@ -1323,7 +1323,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Records Number:.
         /// </summary>
-        internal static string RecordsNumber {
+        public static string RecordsNumber {
             get {
                 return ResourceManager.GetString("RecordsNumber", resourceCulture);
             }
@@ -1332,7 +1332,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a An email has been sent to you with instructions on how to recover your password..
         /// </summary>
-        internal static string RecoverPasswordMessage {
+        public static string RecoverPasswordMessage {
             get {
                 return ResourceManager.GetString("RecoverPasswordMessage", resourceCulture);
             }
@@ -1341,7 +1341,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Rectangular.
         /// </summary>
-        internal static string Rectangular {
+        public static string Rectangular {
             get {
                 return ResourceManager.GetString("Rectangular", resourceCulture);
             }
@@ -1350,7 +1350,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Register as new user.
         /// </summary>
-        internal static string Register {
+        public static string Register {
             get {
                 return ResourceManager.GetString("Register", resourceCulture);
             }
@@ -1359,7 +1359,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Remarks.
         /// </summary>
-        internal static string Remarks {
+        public static string Remarks {
             get {
                 return ResourceManager.GetString("Remarks", resourceCulture);
             }
@@ -1368,7 +1368,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Field {0} is required..
         /// </summary>
-        internal static string RequiredField {
+        public static string RequiredField {
             get {
                 return ResourceManager.GetString("RequiredField", resourceCulture);
             }
@@ -1377,7 +1377,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Resend account activation email.
         /// </summary>
-        internal static string ResendAccountActivationEmail {
+        public static string ResendAccountActivationEmail {
             get {
                 return ResourceManager.GetString("ResendAccountActivationEmail", resourceCulture);
             }
@@ -1386,7 +1386,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Return.
         /// </summary>
-        internal static string Return {
+        public static string Return {
             get {
                 return ResourceManager.GetString("Return", resourceCulture);
             }
@@ -1395,7 +1395,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Save Changes.
         /// </summary>
-        internal static string SaveChanges {
+        public static string SaveChanges {
             get {
                 return ResourceManager.GetString("SaveChanges", resourceCulture);
             }
@@ -1404,7 +1404,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Search....
         /// </summary>
-        internal static string Search {
+        public static string Search {
             get {
                 return ResourceManager.GetString("Search", resourceCulture);
             }
@@ -1413,7 +1413,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a -- Select a Country --.
         /// </summary>
-        internal static string SelectACountry {
+        public static string SelectACountry {
             get {
                 return ResourceManager.GetString("SelectACountry", resourceCulture);
             }
@@ -1422,7 +1422,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a -- Select a Team --.
         /// </summary>
-        internal static string SelectATeam {
+        public static string SelectATeam {
             get {
                 return ResourceManager.GetString("SelectATeam", resourceCulture);
             }
@@ -1431,7 +1431,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a -- Select a Tournament --.
         /// </summary>
-        internal static string SelectATournament {
+        public static string SelectATournament {
             get {
                 return ResourceManager.GetString("SelectATournament", resourceCulture);
             }
@@ -1440,7 +1440,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Select a Date....
         /// </summary>
-        internal static string SelectDate {
+        public static string SelectDate {
             get {
                 return ResourceManager.GetString("SelectDate", resourceCulture);
             }
@@ -1449,7 +1449,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Select a File… .
         /// </summary>
-        internal static string SelectFile {
+        public static string SelectFile {
             get {
                 return ResourceManager.GetString("SelectFile", resourceCulture);
             }
@@ -1458,7 +1458,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Select a Time....
         /// </summary>
-        internal static string SelectTime {
+        public static string SelectTime {
             get {
                 return ResourceManager.GetString("SelectTime", resourceCulture);
             }
@@ -1467,7 +1467,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Send.
         /// </summary>
-        internal static string Send {
+        public static string Send {
             get {
                 return ResourceManager.GetString("Send", resourceCulture);
             }
@@ -1476,7 +1476,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Your account has been created successfully. An email has been sent to you with instructions on how to activate your account..
         /// </summary>
-        internal static string SendEmailConfirmationMessage {
+        public static string SendEmailConfirmationMessage {
             get {
                 return ResourceManager.GetString("SendEmailConfirmationMessage", resourceCulture);
             }
@@ -1485,7 +1485,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Single Points Match.
         /// </summary>
-        internal static string SinglePointsMatchMessage {
+        public static string SinglePointsMatchMessage {
             get {
                 return ResourceManager.GetString("SinglePointsMatchMessage", resourceCulture);
             }
@@ -1494,7 +1494,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Spanish.
         /// </summary>
-        internal static string Spanish {
+        public static string Spanish {
             get {
                 return ResourceManager.GetString("Spanish", resourceCulture);
             }
@@ -1503,7 +1503,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Square.
         /// </summary>
-        internal static string Square {
+        public static string Square {
             get {
                 return ResourceManager.GetString("Square", resourceCulture);
             }
@@ -1512,7 +1512,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Status.
         /// </summary>
-        internal static string Status {
+        public static string Status {
             get {
                 return ResourceManager.GetString("Status", resourceCulture);
             }
@@ -1521,7 +1521,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Soccer predictions app.
         /// </summary>
-        internal static string Subtitle {
+        public static string Subtitle {
             get {
                 return ResourceManager.GetString("Subtitle", resourceCulture);
             }
@@ -1530,7 +1530,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Team.
         /// </summary>
-        internal static string Team {
+        public static string Team {
             get {
                 return ResourceManager.GetString("Team", resourceCulture);
             }
@@ -1539,7 +1539,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Teams.
         /// </summary>
-        internal static string Teams {
+        public static string Teams {
             get {
                 return ResourceManager.GetString("Teams", resourceCulture);
             }
@@ -1548,7 +1548,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Title.
         /// </summary>
-        internal static string Title {
+        public static string Title {
             get {
                 return ResourceManager.GetString("Title", resourceCulture);
             }
@@ -1557,7 +1557,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Tournament.
         /// </summary>
-        internal static string Tournament {
+        public static string Tournament {
             get {
                 return ResourceManager.GetString("Tournament", resourceCulture);
             }
@@ -1566,7 +1566,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a The tournament is active.
         /// </summary>
-        internal static string TournamentActive {
+        public static string TournamentActive {
             get {
                 return ResourceManager.GetString("TournamentActive", resourceCulture);
             }
@@ -1575,7 +1575,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a The tournament is inactive.
         /// </summary>
-        internal static string TournamentInactive {
+        public static string TournamentInactive {
             get {
                 return ResourceManager.GetString("TournamentInactive", resourceCulture);
             }
@@ -1584,7 +1584,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Tournaments.
         /// </summary>
-        internal static string Tournaments {
+        public static string Tournaments {
             get {
                 return ResourceManager.GetString("Tournaments", resourceCulture);
             }
@@ -1593,7 +1593,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a UpdatedAt.
         /// </summary>
-        internal static string UpdatedAt {
+        public static string UpdatedAt {
             get {
                 return ResourceManager.GetString("UpdatedAt", resourceCulture);
             }
@@ -1602,7 +1602,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a User.
         /// </summary>
-        internal static string User {
+        public static string User {
             get {
                 return ResourceManager.GetString("User", resourceCulture);
             }
@@ -1611,7 +1611,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a User added to the group. The user can now enter and enter their predictions..
         /// </summary>
-        internal static string UserAddedToGroupOk {
+        public static string UserAddedToGroupOk {
             get {
                 return ResourceManager.GetString("UserAddedToGroupOk", resourceCulture);
             }
@@ -1620,7 +1620,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a User Registration.
         /// </summary>
-        internal static string UserRegister {
+        public static string UserRegister {
             get {
                 return ResourceManager.GetString("UserRegister", resourceCulture);
             }
@@ -1629,7 +1629,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Users.
         /// </summary>
-        internal static string Users {
+        public static string Users {
             get {
                 return ResourceManager.GetString("Users", resourceCulture);
             }
@@ -1638,7 +1638,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a User Type.
         /// </summary>
-        internal static string UserType {
+        public static string UserType {
             get {
                 return ResourceManager.GetString("UserType", resourceCulture);
             }
@@ -1647,7 +1647,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a You must enter a valid email..
         /// </summary>
-        internal static string ValidEmail {
+        public static string ValidEmail {
             get {
                 return ResourceManager.GetString("ValidEmail", resourceCulture);
             }
@@ -1656,7 +1656,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Visitor.
         /// </summary>
-        internal static string Visitor {
+        public static string Visitor {
             get {
                 return ResourceManager.GetString("Visitor", resourceCulture);
             }
@@ -1665,7 +1665,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Watch.
         /// </summary>
-        internal static string Watch {
+        public static string Watch {
             get {
                 return ResourceManager.GetString("Watch", resourceCulture);
             }
@@ -1674,7 +1674,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Watch Predictions.
         /// </summary>
-        internal static string WatchPredictions {
+        public static string WatchPredictions {
             get {
                 return ResourceManager.GetString("WatchPredictions", resourceCulture);
             }
@@ -1683,7 +1683,7 @@ namespace SharedLibrary.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Yes.
         /// </summary>
-        internal static string Yes {
+        public static string Yes {
             get {
                 return ResourceManager.GetString("Yes", resourceCulture);
             }

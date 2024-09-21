@@ -1,6 +1,14 @@
 using Microsoft.EntityFrameworkCore;
 using SettingsService.Data;
+using SettingsService.Repositories.Implementations;
+using SettingsService.Repositories.Interfaces;
+using SettingsService.UnitsOfWork.Implementations;
+using SettingsService.UnitsOfWork.Interfaces;
 using SharedLibrary.Data;
+using SharedLibrary.Repositories.Implementations;
+using SharedLibrary.Repositories.Interfaces;
+using SharedLibrary.UnitsOfWork.Implementations;
+using SharedLibrary.UnitsOfWork.Interfaces;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +22,9 @@ builder.Services.AddSwaggerGen();
 
 
 #region Configure database
+
+builder.Services.AddScoped<IDataConext, DataContext>();
+
 var configuration = builder.Configuration;
 
 builder.Services.AddTransient<IDbContextConfigurator>(provider =>
@@ -29,6 +40,13 @@ builder.Services.AddDbContext<DataContext>((serviceProvider, options) =>
     configurator.Configure(options);
 });
 #endregion
+
+builder.Services.AddScoped(typeof(IGenericUnitOfWork<>), typeof(GenericUnitOfWork<>));
+builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+
+builder.Services.AddScoped<ICompanyRepository, CompanyRepository>();
+builder.Services.AddScoped<ICompanyUnitOfWork, CompanyUnitOfWork>();
+
 
 
 var app = builder.Build();
