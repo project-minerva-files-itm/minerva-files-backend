@@ -77,18 +77,14 @@ namespace SharedLibrary.Repositories.Implementations
                 .SetResult(await _entity.ToListAsync()).Build();
         }
 
-        /*
         public virtual async Task<ActionResponse<T>> UpdateAsync(T entity)
         {
             try
             {
-                _context.Update(entity);
-                await _context.SaveChangesAsync();
-                return new ActionResponse<T>
-                {
-                    WasSuccess = true,
-                    Result = entity
-                };
+                _context.UpdateEntity(entity);
+                await _context.SaveAsync();
+                return new ActionResponse<T>.ActionResponseBuilder().SetResult(entity).Build();
+               
             }
             catch (DbUpdateException)
             {
@@ -99,6 +95,9 @@ namespace SharedLibrary.Repositories.Implementations
                 return ExceptionActionResponse(exception);
             }
         }
+
+        /*
+        
 
         public virtual async Task<ActionResponse<IEnumerable<T>>> GetAsync(PaginationDTO pagination)
         {

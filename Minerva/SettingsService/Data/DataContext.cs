@@ -33,9 +33,16 @@ namespace SettingsService.Data
             Set<T>().Add(entity);
         }
 
+        public void UpdateEntity<T>(T entity) where T : class
+        {
+            Set<T>().Update(entity);
+        }
+
         public async Task<int> SaveAsync(CancellationToken cancellationToken = default)
         {
             return await base.SaveChangesAsync(cancellationToken);
         }
+
+      
     }
 }

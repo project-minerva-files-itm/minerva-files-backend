@@ -1,5 +1,4 @@
-﻿using SharedLibrary.DTOs;
-using SharedLibrary.Responses;
+﻿using SharedLibrary.Responses;
 
 
 namespace SharedLibrary.Repositories.Interfaces
@@ -12,14 +11,9 @@ namespace SharedLibrary.Repositories.Interfaces
 
         Task<ActionResponse<T>> AddAsync(T entity);
 
-        // Task<ActionResponse<IEnumerable<T>>> GetAsync(PaginationDTO pagination);
+        Task<ActionResponse<T>> UpdateAsync(T entity);
 
-        /* Task<ActionResponse<int>> GetTotalRecordsAsync();
+        Task<ActionResponse<T>> DeleteAsync(int id);
 
-         Task<ActionResponse<T>> AddAsync(T entity);
-
-         Task<ActionResponse<T>> DeleteAsync(int id);
-
-         Task<ActionResponse<T>> UpdateAsync(T entity);*/
     }
 }
