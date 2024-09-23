@@ -1,0 +1,6 @@
+@SLAService_HostAddress = http://localhost:5181
+
+GET {{SLAService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
