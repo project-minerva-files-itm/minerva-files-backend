@@ -604,7 +604,7 @@
     <value>Select a Date...</value>
   </data>
   <data name="SelectFile" xml:space="preserve">
-    <value>Select a File… </value>
+    <value>Select a File…</value>
   </data>
   <data name="SelectTime" xml:space="preserve">
     <value>Select a Time...</value>

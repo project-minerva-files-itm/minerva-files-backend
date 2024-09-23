@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SharedLibrary.Entities;
 
-internal class ActivityState
+public class ActivityState
 {
     public int Id { get; set; }
 
