@@ -12,9 +12,15 @@ namespace SettingsService.Data
 
         public DbSet<Company> Companies { get; set; }
 
+        public DbSet<ActivityState> ActivityStates { get; set; }
+
+        public DbSet<RequestType> RequestTypes { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<ActivityState>().HasIndex(x => x.Name).IsUnique();
+            modelBuilder.Entity<RequestType>().HasIndex(x => x.Name).IsUnique();
             DisableCascadingDelete(modelBuilder);
         }
 
