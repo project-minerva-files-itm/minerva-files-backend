@@ -10,7 +10,6 @@ using SharedLibrary.Repositories.Interfaces;
 using SharedLibrary.UnitsOfWork.Implementations;
 using SharedLibrary.UnitsOfWork.Interfaces;
 
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -19,7 +18,6 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
 
 #region Configure database
 
@@ -39,7 +37,8 @@ builder.Services.AddDbContext<DataContext>((serviceProvider, options) =>
     var configurator = serviceProvider.GetRequiredService<IDbContextConfigurator>();
     configurator.Configure(options);
 });
-#endregion
+
+#endregion Configure database
 
 builder.Services.AddScoped(typeof(IGenericUnitOfWork<>), typeof(GenericUnitOfWork<>));
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
@@ -47,7 +46,8 @@ builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepositor
 builder.Services.AddScoped<ICompanyRepository, CompanyRepository>();
 builder.Services.AddScoped<ICompanyUnitOfWork, CompanyUnitOfWork>();
 
-
+builder.Services.AddScoped<IActivityStateRepository, ActivityStateRepository>();
+builder.Services.AddScoped<IActivityStateUnitOfWork, ActivityStateUnitOfWork>();
 
 var app = builder.Build();
 
