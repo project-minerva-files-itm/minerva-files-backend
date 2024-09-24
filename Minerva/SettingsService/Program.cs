@@ -49,6 +49,9 @@ builder.Services.AddScoped<ICompanyUnitOfWork, CompanyUnitOfWork>();
 builder.Services.AddScoped<IActivityStateRepository, ActivityStateRepository>();
 builder.Services.AddScoped<IActivityStateUnitOfWork, ActivityStateUnitOfWork>();
 
+builder.Services.AddScoped<IRequestTypeRepository, RequestTypeRepository>();
+builder.Services.AddScoped<IRequestTypeUnitOfWork, RequestTypeUnitOfWork>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
