@@ -1,9 +1,9 @@
 ﻿using SharedLibrary.Resources;
 using System.ComponentModel.DataAnnotations;
 
-namespace SharedLibrary.Entities;
+namespace SharedLibrary.DTOs;
 
-public class ActivityState
+public class ActivityStateDTO
 {
     public int Id { get; set; }
 
@@ -16,16 +16,6 @@ public class ActivityState
     [MaxLength(255, ErrorMessageResourceName = "MaxLength", ErrorMessageResourceType = typeof(Literals))]
     [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(Literals))]
     public string Description { get; set; } = null!;
-
-    [Display(Name = "Manager", ResourceType = typeof(Literals))]
-    [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(Literals))]
-    public bool IsActive { get; set; }
-
-    [Display(Name = "CreatedAt", ResourceType = typeof(Literals))]
-    public DateTime CreatedAt { get; set; }
-
-    [Display(Name = "UpdatedAt", ResourceType = typeof(Literals))]
-    public DateTime UpdatedAt { get; set; }
 
     [Display(Name = "LastUser", ResourceType = typeof(Literals))]
     public string LastUser { get; set; } = string.Empty;

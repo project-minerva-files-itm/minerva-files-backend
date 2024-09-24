@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SharedLibrary.Entities;
 
-public class ActivityState
+public class RequestType
 {
     public int Id { get; set; }
 
