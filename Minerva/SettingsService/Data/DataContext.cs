@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SharedLibrary.Data;
 using SharedLibrary.Entities;
+using System.Diagnostics.Metrics;
 
 namespace SettingsService.Data
 {
@@ -14,10 +15,13 @@ namespace SettingsService.Data
 
         public DbSet<RequestType> RequestTypes { get; set; }
 
+        public DbSet<ActivityState> ActivityStates { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<RequestType>().HasIndex(x => x.Name).IsUnique();
+            modelBuilder.Entity<ActivityState>().HasIndex(x => x.Name).IsUnique();
             DisableCascadingDelete(modelBuilder);
         }
 
@@ -29,6 +33,7 @@ namespace SettingsService.Data
                 relationship.DeleteBehavior = DeleteBehavior.Restrict;
             }
         }
+
 
         public void AddEntity<T>(T entity) where T : class
         {
@@ -44,5 +49,7 @@ namespace SettingsService.Data
         {
             return await base.SaveChangesAsync(cancellationToken);
         }
+
+      
     }
 }
