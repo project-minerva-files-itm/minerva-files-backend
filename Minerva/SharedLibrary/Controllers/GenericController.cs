@@ -1,5 +1,6 @@
 ﻿
 using Microsoft.AspNetCore.Mvc;
+using SharedLibrary.DTOs;
 using SharedLibrary.UnitsOfWork.Interfaces;
 
 namespace SharedLibrary.Controllers
@@ -20,9 +21,9 @@ namespace SharedLibrary.Controllers
             var action = await _unitOfWork.AddAsync(model);
             if (action.WasSuccess)
             {
-                return Ok(action.Result);
+                return Ok(action);
             }
-            return BadRequest(action.Message);
+            return BadRequest(action);
         }
 
         [HttpGet]
@@ -36,15 +37,27 @@ namespace SharedLibrary.Controllers
             return BadRequest();
         }
 
+        [HttpGet("paginated")]
+        public virtual async Task<IActionResult> GetAllAsync([FromQuery] PaginationDTO pagination)
+        {
+            var action = await _unitOfWork.GetAllAsync(pagination);
+            if (action.WasSuccess)
+            {
+                return Ok(action);
+            }
+            return BadRequest();
+        }
+
+
         [HttpPut]
         public virtual async Task<IActionResult> PutAsync(T model)
         {
             var action = await _unitOfWork.UpdateAsync(model);
             if (action.WasSuccess)
             {
-                return Ok(action.Result);
+                return Ok(action);
             }
-            return BadRequest(action.Message);
+            return BadRequest(action);
         }
 
         [HttpDelete("{id}")]
@@ -53,7 +66,7 @@ namespace SharedLibrary.Controllers
             var action = await _unitOfWork.DeleteAsync(id);
             if (action.WasSuccess)
             {
-                return NoContent();
+                return Ok(action);
             }
             return BadRequest(action.Message);
         }
