@@ -16,7 +16,4 @@ public class ActivityStateDTO
     [MaxLength(255, ErrorMessageResourceName = "MaxLength", ErrorMessageResourceType = typeof(Literals))]
     [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(Literals))]
     public string Description { get; set; } = null!;
-
-    [Display(Name = "LastUser", ResourceType = typeof(Literals))]
-    public string LastUser { get; set; } = string.Empty;
 }
