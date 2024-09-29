@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json;
 using SharedLibrary.Data;
 using SharedLibrary.DTOs;
 using SharedLibrary.Helpers;
@@ -78,6 +79,10 @@ namespace SharedLibrary.Repositories.Implementations
         {
             var queryable = _entity.AsQueryable();
 
+            if (pagination.Filter!=null) {
+               queryable= queryable.GetFilteredDataAsync(pagination.Filter??"");
+            }
+
             var result = await queryable.Paginate(pagination).ToListAsync();
 
             if (pagination.Total=="") {
@@ -133,6 +138,9 @@ namespace SharedLibrary.Repositories.Implementations
             return new ActionResponse<T>.ActionResponseBuilder().SetMessage("ERR003").Build();
         }
 
+      
+
        
+
     }
 }
