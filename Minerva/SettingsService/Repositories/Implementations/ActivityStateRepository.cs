@@ -22,7 +22,6 @@ public class ActivityStateRepository : GenericRepository<ActivityState>, IActivi
         {
             Name = groupDTO.Name,
             Description = groupDTO.Description,
-            LastUser = groupDTO.LastUser,
         };
         return await AddAsync(activityState);
     }
