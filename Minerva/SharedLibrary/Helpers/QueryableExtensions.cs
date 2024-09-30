@@ -2,6 +2,10 @@
 using SharedLibrary.DTOs;
 using System.Linq;
 using System.Linq.Expressions;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using System.Reflection.Metadata;
+using System.Data.Common;
+using Microsoft.Extensions.Primitives;
 
 
 namespace SharedLibrary.Helpers
@@ -18,7 +22,7 @@ namespace SharedLibrary.Helpers
 
 
 
-        public static IQueryable<T> GetFilteredDataAsync<T>(this IQueryable<T> queryable,string jsonString)
+        public static IQueryable<T> GetFilteredDataAsync<T>(this IQueryable<T> queryable, string jsonString)
         {
             var filters = JsonConvert.DeserializeObject<Dictionary<string, object>>(jsonString);
 
@@ -50,41 +54,52 @@ namespace SharedLibrary.Helpers
             // Crea la expresión para la propiedad: e.PropertyName
             var property = Expression.Property(parameter, propertyName);
 
-            // Crea la expresión para el valor del filtro
-            var constant = Expression.Constant(propertyValue);
+            if (property.Type == typeof(Int32)) {
+                return query.FilterEqual(property, propertyValue, parameter);
+            }
 
-        
-
-
-            if (propertyValue is string stringValue)
+            if (property.Type == typeof(string))
             {
-                // Aquí aplicamos un "LIKE" que sería similar a SQL "%valor%"
-                var method = typeof(string).GetMethod("Contains", new[] { typeof(string) });
-
-                var likeExpression = Expression.Call(property, method, Expression.Constant(stringValue));
-
-                // Crea el lambda: e => e.PropertyName LIKE propertyValue
-                var lambda = Expression.Lambda<Func<T, bool>>(likeExpression, parameter);
-
-                // Aplica el filtro a la consulta
-                return query.Where(lambda);
-
-            }
-            else {
-
-                // Crea la comparación e.PropertyName == propertyValue
-                var equalExpression = Expression.Equal(property, constant);
-
-                // Crea el lambda: e => e.PropertyName == propertyValue
-                var lambda = Expression.Lambda<Func<T, bool>>(equalExpression, parameter);
-
-                // Aplica el filtro a la consulta
-                return query.Where(lambda);
-
+                return query.FilterLike(property, parameter, propertyValue.ToString() ?? "");
             }
 
-
-          
+             return query;
         }
+
+
+        private static IQueryable<T> FilterEqual<T>(this IQueryable<T> query, MemberExpression property, object propertyValue, ParameterExpression parameter)
+        {
+
+            // Crea la expresión para el valor del filtro
+            var constant = Expression.Constant(Convert.ToInt32(propertyValue));
+
+            // Crea la comparación e.PropertyName == propertyValue
+            var equalExpression = Expression.Equal(property, constant);
+
+            // Crea el lambda: e => e.PropertyName == propertyValue
+            var lambda = Expression.Lambda<Func<T, bool>>(equalExpression, parameter);
+
+            // Aplica el filtro a la consulta
+            return query.Where(lambda);
+
+        }
+
+        private static IQueryable<T> FilterLike<T>(this IQueryable<T> query, MemberExpression property, ParameterExpression parameter, string stringValue)
+        {
+
+            // Aquí aplicamos un "LIKE" que sería similar a SQL "%valor%"
+            var method = typeof(string).GetMethod("Contains", new[] { typeof(string) });
+
+            var likeExpression = Expression.Call(property, method, Expression.Constant(stringValue));
+
+            // Crea el lambda: e => e.PropertyName LIKE propertyValue
+            var lambda = Expression.Lambda<Func<T, bool>>(likeExpression, parameter);
+
+            // Aplica el filtro a la consulta
+            return query.Where(lambda);
+
+        }
+
+
     }
 }
