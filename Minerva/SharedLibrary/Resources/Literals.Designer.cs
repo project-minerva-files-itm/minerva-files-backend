@@ -1447,7 +1447,7 @@ namespace SharedLibrary.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Select a File… .
+        ///   Looks up a localized string similar to Select a File….
         /// </summary>
         public static string SelectFile {
             get {
