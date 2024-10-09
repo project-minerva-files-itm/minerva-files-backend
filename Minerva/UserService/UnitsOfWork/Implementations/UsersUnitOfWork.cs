@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using SharedLibrary.DTOs;
 using SharedLibrary.Entities;
 using UserService.Repositories.Interfaces;
 using UserService.UnitsOfWork.Interfaces;
@@ -23,4 +24,8 @@ public class UsersUnitOfWork : IUsersUnitOfWork
     public async Task<User> GetUserAsync(string email) => await _usersRepository.GetUserAsync(email);
 
     public async Task<bool> IsUserInRoleAsync(User user, string roleName) => await _usersRepository.IsUserInRoleAsync(user, roleName);
+
+    public async Task<SignInResult> LoginAsync(LoginDTO model) => await _usersRepository.LoginAsync(model);
+
+    public async Task LogoutAsync() => await _usersRepository.LogoutAsync();
 }
