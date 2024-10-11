@@ -67,4 +67,23 @@ public class UsersRepository : IUsersRepository
     {
         await _signInManager.SignOutAsync();
     }
+
+    public async Task<User> GetUserAsync(Guid userId)
+    {
+        var user = await _context.Users
+            //TODO: relacion con departamen_company
+            //.Include(u => u.Departament)
+            .FirstOrDefaultAsync(x => x.Id == userId.ToString());
+        return user!;
+    }
+
+    public async Task<string> GenerateEmailConfirmationTokenAsync(User user)
+    {
+        return await _userManager.GenerateEmailConfirmationTokenAsync(user);
+    }
+
+    public async Task<IdentityResult> ConfirmEmailAsync(User user, string token)
+    {
+        return await _userManager.ConfirmEmailAsync(user, token);
+    }
 }
