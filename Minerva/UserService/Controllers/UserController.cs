@@ -101,7 +101,7 @@ public class UserController : ControllerBase
         return NoContent();
     }
 
-    public async Task<ActionResponse<string>> SendConfirmationEmailAsync(User user, string language)
+    private async Task<ActionResponse<string>> SendConfirmationEmailAsync(User user, string language)
     {
         var myToken = await _usersUnitOfWork.GenerateEmailConfirmationTokenAsync(user);
         var tokenLink = Url.Action("ConfirmEmail", "accounts", new
