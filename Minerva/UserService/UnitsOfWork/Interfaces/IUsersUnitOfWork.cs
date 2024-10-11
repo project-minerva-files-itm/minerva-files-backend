@@ -6,6 +6,12 @@ namespace UserService.UnitsOfWork.Interfaces;
 
 public interface IUsersUnitOfWork
 {
+    Task<User> GetUserAsync(Guid userId);
+
+    Task<string> GenerateEmailConfirmationTokenAsync(User user);
+
+    Task<IdentityResult> ConfirmEmailAsync(User user, string token);
+
     Task<SignInResult> LoginAsync(LoginDTO model);
 
     Task LogoutAsync();
@@ -19,4 +25,8 @@ public interface IUsersUnitOfWork
     Task AddUserToRoleAsync(User user, string roleName);
 
     Task<bool> IsUserInRoleAsync(User user, string roleName);
+
+    Task<IdentityResult> ChangePasswordAsync(User user, string currentPassword, string newPassword);
+
+    Task<IdentityResult> UpdateUserAsync(User user);
 }
