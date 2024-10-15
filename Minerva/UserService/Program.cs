@@ -1,16 +1,16 @@
-using Fantasy.Backend.Repositories.Implementations;
-using Fantasy.Backend.UnitsOfWork.Implementations;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using SharedLibrary.Data;
 using SharedLibrary.Entities;
 using SharedLibrary.Helpers;
 using System.Text;
 using System.Text.Json.Serialization;
 using UserService.Data;
+using UserService.Repositories.Implementations;
 using UserService.Repositories.Interfaces;
+using UserService.UnitsOfWork.Implementations;
 using UserService.UnitsOfWork.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -59,26 +59,17 @@ builder.Services.AddSwaggerGen(c =>
 
 #region Configure database
 
-builder.Services.AddScoped<DataContext>();
-
 var configuration = builder.Configuration;
 
-builder.Services.AddTransient<IDbContextConfigurator>(provider =>
-{
-    var providerName = configuration["DatabaseProvider"] ?? "";
-    var connectionString = configuration.GetConnectionString(providerName == "MySQL" ? "MySqlConnection" : "SqlServerConnection") ?? "";
-    return DbContextConfiguratorFactory.CreateConfigurator(providerName, connectionString);
-});
-
-builder.Services.AddDbContext<DataContext>((serviceProvider, options) =>
-{
-    var configurator = serviceProvider.GetRequiredService<IDbContextConfigurator>();
-    configurator.Configure(options);
-});
-
-builder.Services.AddTransient<SeedDb>();
+var connectionString = configuration.GetConnectionString("MySqlConnection") ?? "";
+builder.Services.AddDbContext<DataContext>(x =>
+    x.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
 #endregion Configure database
+
+builder.Services.AddTransient<SeedDb>();
+builder.Services.AddTransient<IFileStorage, FileStorage>();
+builder.Services.AddScoped<IMailHelper, MailHelper>();
 
 builder.Services.AddScoped<IUsersRepository, UsersRepository>();
 builder.Services.AddScoped<IUsersUnitOfWork, UsersUnitOfWork>();
