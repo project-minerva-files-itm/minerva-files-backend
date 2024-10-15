@@ -1,11 +1,10 @@
 ﻿using SharedLibrary.Entities;
-using SharedLibrary.Data;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace UserService.Data;
 
-public class DataContext : IdentityDbContext<User>
+public class DataContext : IdentityDbContext<User>, IDataConext
 {
     public DataContext(DbContextOptions<DataContext> options) : base(options)
     {
