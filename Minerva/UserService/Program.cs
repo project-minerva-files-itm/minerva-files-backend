@@ -70,6 +70,8 @@ builder.Services.AddDbContext<DataContext>(x =>
 builder.Services.AddTransient<SeedDb>();
 builder.Services.AddTransient<IFileStorage, FileStorage>();
 builder.Services.AddScoped<IMailHelper, MailHelper>();
+builder.Services.AddScoped<ISmtpClient, SmtpClientWrapper>();
+builder.Services.AddScoped<IBlobContainerClientFactory, BlobContainerClientFactory>();
 
 builder.Services.AddScoped<IUsersRepository, UsersRepository>();
 builder.Services.AddScoped<IUsersUnitOfWork, UsersUnitOfWork>();
