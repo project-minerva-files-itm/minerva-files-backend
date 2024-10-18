@@ -52,6 +52,9 @@ builder.Services.AddScoped<IActivityStateUnitOfWork, ActivityStateUnitOfWork>();
 builder.Services.AddScoped<IRequestTypeRepository, RequestTypeRepository>();
 builder.Services.AddScoped<IRequestTypeUnitOfWork, RequestTypeUnitOfWork>();
 
+builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
+builder.Services.AddScoped<IDepartmentUnitOfWork, DepartmentUnitOfWork>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -67,13 +70,10 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-
 app.UseCors(x => x
            .AllowAnyMethod()
            .AllowAnyHeader()
            .SetIsOriginAllowed(origin => true)
            .AllowCredentials());
 
-
 app.Run();
-

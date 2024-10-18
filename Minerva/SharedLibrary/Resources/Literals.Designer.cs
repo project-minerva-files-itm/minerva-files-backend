@@ -412,6 +412,15 @@ namespace SharedLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Departament.
+        /// </summary>
+        public static string Departament {
+            get {
+                return ResourceManager.GetString("Departament", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Description.
         /// </summary>
         public static string Description {
@@ -903,6 +912,15 @@ namespace SharedLibrary.Resources {
         public static string Local {
             get {
                 return ResourceManager.GetString("Local", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Location.
+        /// </summary>
+        public static string Location {
+            get {
+                return ResourceManager.GetString("Location", resourceCulture);
             }
         }
         
