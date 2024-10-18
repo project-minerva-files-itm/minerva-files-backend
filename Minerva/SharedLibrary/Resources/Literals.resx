@@ -684,4 +684,10 @@
   <data name="Yes" xml:space="preserve">
     <value>Yes</value>
   </data>
+  <data name="Location" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="Departament" xml:space="preserve">
+    <value>Departament</value>
+  </data>
 </root>
