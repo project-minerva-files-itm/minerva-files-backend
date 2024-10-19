@@ -21,6 +21,8 @@ namespace SettingsService.Data
 
         public DbSet<DocumentType> DocumentTypes { get; set; }
 
+        public DbSet<ActivityType> ActivityTypes { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -28,6 +30,7 @@ namespace SettingsService.Data
             modelBuilder.Entity<ActivityState>().HasIndex(x => x.Name).IsUnique();
             modelBuilder.Entity<Department>().HasIndex(x => x.Name).IsUnique();
             modelBuilder.Entity<DocumentType>().HasIndex(x => x.Name).IsUnique();
+            modelBuilder.Entity<ActivityType>().HasIndex(x => x.Name).IsUnique();
             DisableCascadingDelete(modelBuilder);
         }
 
