@@ -58,6 +58,10 @@ builder.Services.AddScoped<IDepartmentUnitOfWork, DepartmentUnitOfWork>();
 builder.Services.AddScoped<IDocumentTypeRepository, DocumentTypeRepository>();
 builder.Services.AddScoped<IDocumentTypeUnitOfWork, DocumentTypeUnitOfWork>();
 
+builder.Services.AddScoped<IActivityTypeRepository, ActivityTypeRepository>();
+builder.Services.AddScoped<IActivityTypeUnitOfWork, ActivityTypeUnitOfWork>();
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
