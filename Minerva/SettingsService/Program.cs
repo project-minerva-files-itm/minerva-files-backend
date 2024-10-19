@@ -55,6 +55,9 @@ builder.Services.AddScoped<IRequestTypeUnitOfWork, RequestTypeUnitOfWork>();
 builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
 builder.Services.AddScoped<IDepartmentUnitOfWork, DepartmentUnitOfWork>();
 
+builder.Services.AddScoped<IDocumentTypeRepository, DocumentTypeRepository>();
+builder.Services.AddScoped<IDocumentTypeUnitOfWork, DocumentTypeUnitOfWork>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

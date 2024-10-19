@@ -19,12 +19,15 @@ namespace SettingsService.Data
 
         public DbSet<Department> Departments { get; set; }
 
+        public DbSet<DocumentType> DocumentTypes { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<RequestType>().HasIndex(x => x.Name).IsUnique();
             modelBuilder.Entity<ActivityState>().HasIndex(x => x.Name).IsUnique();
             modelBuilder.Entity<Department>().HasIndex(x => x.Name).IsUnique();
+            modelBuilder.Entity<DocumentType>().HasIndex(x => x.Name).IsUnique();
             DisableCascadingDelete(modelBuilder);
         }
 
