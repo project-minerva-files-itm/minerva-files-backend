@@ -690,4 +690,10 @@
   <data name="Departament" xml:space="preserve">
     <value>Departament</value>
   </data>
+  <data name="UserId" xml:space="preserve">
+    <value>UserId</value>
+  </data>
+  <data name="ValidUserId" xml:space="preserve">
+    <value>User ID is required</value>
+  </data>
 </root>
