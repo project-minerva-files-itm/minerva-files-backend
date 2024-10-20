@@ -86,7 +86,7 @@ builder.Services.AddIdentity<User, IdentityRole>(x =>
     x.Password.RequireLowercase = false;
     x.Password.RequireNonAlphanumeric = false;
     x.Password.RequireUppercase = false;
-    x.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+    x.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(1);
     x.Lockout.MaxFailedAccessAttempts = 3;
     x.Lockout.AllowedForNewUsers = true;
 })
@@ -124,14 +124,19 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+
+
+app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+
 app.UseCors(x => x
            .AllowAnyMethod()
            .AllowAnyHeader()
            .SetIsOriginAllowed(origin => true)
            .AllowCredentials());
-
-app.UseHttpsRedirection();
-app.UseAuthorization();
-app.MapControllers();
 
 app.Run();

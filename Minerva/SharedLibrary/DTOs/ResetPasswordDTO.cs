@@ -5,10 +5,14 @@ namespace SharedLibrary.DTOs;
 
 public class ResetPasswordDTO
 {
-    [Display(Name = "Email", ResourceType = typeof(Literals))]
+    /*[Display(Name = "UserId", ResourceType = typeof(Literals))]
     [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(Literals))]
-    [EmailAddress(ErrorMessageResourceName = "ValidEmail", ErrorMessageResourceType = typeof(Literals))]
-    public string Email { get; set; } = null!;
+    [EmailAddress(ErrorMessageResourceName = "ValidUserId", ErrorMessageResourceType = typeof(Literals))]*/
+    public string? UserId { get; set; } = null!;
+
+
+    public string? Email { get; set; } = null!;
+
 
     [DataType(DataType.Password)]
     [Display(Name = "NewPassword", ResourceType = typeof(Literals))]

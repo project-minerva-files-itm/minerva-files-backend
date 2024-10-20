@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using SharedLibrary.DTOs;
 using SharedLibrary.Entities;
+using SharedLibrary.Responses;
 
 namespace UserService.Repositories.Interfaces;
 
