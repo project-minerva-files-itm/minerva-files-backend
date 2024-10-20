@@ -26,4 +26,8 @@ public class User : IdentityUser
 
     [Display(Name = "User", ResourceType = typeof(Literals))]
     public string FullName => $"{FirstName} {LastName}";
+
+    [Display(Name = "Department", ResourceType = typeof(Literals))]
+    [Range(1, int.MaxValue, ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(Literals))]
+    public int DepartmentId { get; set; }
 }
