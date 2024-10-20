@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using SharedLibrary.DTOs;
 using SharedLibrary.Entities;
+using SharedLibrary.Responses;
 using UserService.Data;
 using UserService.Repositories.Interfaces;
 
@@ -50,6 +51,7 @@ public class UsersRepository : IUsersRepository
             //TODO: relacion con departamen_company
             //.Include(u => u.Departament)
             .FirstOrDefaultAsync(x => x.Email == email);
+
         return user!;
     }
 
@@ -75,6 +77,8 @@ public class UsersRepository : IUsersRepository
             //.Include(u => u.Departament)
             .FirstOrDefaultAsync(x => x.Id == userId.ToString());
         return user!;
+
+
     }
 
     public async Task<string> GenerateEmailConfirmationTokenAsync(User user)

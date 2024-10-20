@@ -37,24 +37,33 @@ public class UserController : ControllerBase
     public async Task<IActionResult> RecoverPasswordAsync([FromBody] EmailDTO model)
     {
         var user = await _usersUnitOfWork.GetUserAsync(model.Email);
-        if (user == null)
+
+        if (user==null)
         {
-            return NotFound();
+           
+            return Ok(new ActionResponse<User>.ActionResponseBuilder().SetSuccess(false).SetMessage("Usuario no existe").Build());
         }
 
-        var response = await SendRecoverEmailAsync(user, model.Language);
-        if (response.WasSuccess)
-        {
-            return NoContent();
-        }
+      
+            var response = await SendRecoverEmailAsync(user: user, model.Language);
 
-        return BadRequest(response.Message);
+            if (response.WasSuccess)
+            {
+                return Ok(response);
+            }
+
+            return BadRequest(response.Message);
+        
     }
 
     [HttpPost("ResetPassword")]
     public async Task<IActionResult> ResetPasswordAsync([FromBody] ResetPasswordDTO model)
     {
-        var user = await _usersUnitOfWork.GetUserAsync(model.Email);
+        Guid guid = Guid.Parse(model.UserId!);
+
+        var user =await _usersUnitOfWork.GetUserAsync(guid);
+
+        user = await _usersUnitOfWork.GetUserAsync(user.Email!);
         if (user == null)
         {
             return NotFound();
@@ -68,6 +77,18 @@ public class UserController : ControllerBase
 
         return BadRequest(result.Errors.FirstOrDefault()!.Description);
     }
+
+    [HttpGet("ResetPasswordView")]
+    public  IActionResult ResetPasswordView([FromQuery] string userid, [FromQuery] string token)
+    {
+        var baseUrl = _configuration["UrlFrontend"]; // URL base del frontend
+        var tokenLink = $"http://{baseUrl}/reset-password?userid={userid}&token={token}";
+
+        return Redirect(tokenLink);
+    }
+
+
+    
 
     [HttpPost("changePassword")]
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
@@ -118,6 +139,7 @@ public class UserController : ControllerBase
         try
         {
             var currentUser = await _usersUnitOfWork.GetUserAsync(User.Identity!.Name!);
+
             if (currentUser == null)
             {
                 return NotFound();
@@ -175,13 +197,14 @@ public class UserController : ControllerBase
 
         //user.Country = country;
         var result = await _usersUnitOfWork.AddUserAsync(user, model.Password);
+
         if (result.Succeeded)
         {
             await _usersUnitOfWork.AddUserToRoleAsync(user, user.UserType.ToString());
             var response = await SendConfirmationEmailAsync(user, model.Language);
             if (response.WasSuccess)
             {
-                return NoContent();
+                return Ok(response);
             }
 
             return BadRequest(response.Message);
@@ -235,27 +258,29 @@ public class UserController : ControllerBase
     private async Task<ActionResponse<string>> SendRecoverEmailAsync(User user, string language)
     {
         var myToken = await _usersUnitOfWork.GeneratePasswordResetTokenAsync(user);
-        var tokenLink = Url.Action("ResetPassword", "accounts", new
+
+        var tokenLink = Url.Action("ResetPasswordView", "user", new
         {
             userid = user.Id,
             token = myToken
-        }, HttpContext.Request.Scheme, _configuration["Url Frontend"]);
+        }, HttpContext.Request.Scheme, _configuration["UrlBackend"]);
 
         if (language == "es")
         {
             return _mailHelper.SendMail(user.FullName, user.Email!, _configuration["Mail:SubjectRecoveryEs"]!, string.Format(_configuration["Mail:BodyRecoveryEs"]!, tokenLink), language);
         }
+
         return _mailHelper.SendMail(user.FullName, user.Email!, _configuration["Mail:SubjectRecoveryEn"]!, string.Format(_configuration["Mail:BodyRecoveryEn"]!, tokenLink), language);
     }
 
     private async Task<ActionResponse<string>> SendConfirmationEmailAsync(User user, string language)
     {
         var myToken = await _usersUnitOfWork.GenerateEmailConfirmationTokenAsync(user);
-        var tokenLink = Url.Action("ConfirmEmail", "accounts", new
+        var tokenLink = Url.Action("ConfirmEmail", "User", new
         {
             userid = user.Id,
             token = myToken
-        }, HttpContext.Request.Scheme, _configuration["Url Frontend"]);
+        }, HttpContext.Request.Scheme, _configuration["UrlFrontend"]);
 
         if (language == "es")
         {

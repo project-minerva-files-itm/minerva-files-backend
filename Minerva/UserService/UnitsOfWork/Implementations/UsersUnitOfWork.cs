@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using SharedLibrary.DTOs;
 using SharedLibrary.Entities;
+using SharedLibrary.Responses;
 using UserService.Repositories.Interfaces;
 using UserService.UnitsOfWork.Interfaces;
 
@@ -42,4 +43,5 @@ public class UsersUnitOfWork : IUsersUnitOfWork
     public async Task<string> GeneratePasswordResetTokenAsync(User user) => await _usersRepository.GeneratePasswordResetTokenAsync(user);
 
     public async Task<IdentityResult> ResetPasswordAsync(User user, string token, string password) => await _usersRepository.ResetPasswordAsync(user, token, password);
+
 }
