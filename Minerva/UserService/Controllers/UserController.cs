@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using SharedLibrary.DTOs;
 using SharedLibrary.Entities;
+using SharedLibrary.Enums;
 using SharedLibrary.Helpers;
 using SharedLibrary.Responses;
 using System.IdentityModel.Tokens.Jwt;
@@ -88,8 +89,6 @@ public class UserController : ControllerBase
     }
 
 
-    
-
     [HttpPost("changePassword")]
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public async Task<IActionResult> ChangePasswordAsync(ChangePasswordDTO model)
@@ -111,7 +110,7 @@ public class UserController : ControllerBase
             return BadRequest(result.Errors.FirstOrDefault()!.Description);
         }
 
-        return NoContent();
+        return Ok(result);
     }
 
     [HttpPost("ResedToken")]
@@ -159,7 +158,7 @@ public class UserController : ControllerBase
             var result = await _usersUnitOfWork.UpdateUserAsync(currentUser);
             if (result.Succeeded)
             {
-                return Ok(BuildToken(currentUser));
+                return Ok(result); //BuildToken(currentUser)
             }
 
             return BadRequest(result.Errors.FirstOrDefault());
@@ -175,6 +174,13 @@ public class UserController : ControllerBase
     public async Task<IActionResult> GetAsync()
     {
         return Ok(await _usersUnitOfWork.GetUserAsync(User.Identity!.Name!));
+    }
+
+
+    [HttpGet("User")]
+    public async Task<IActionResult> GetUserAsync(string id)
+    {
+        return Ok(await _usersUnitOfWork.GetUserAsync(new Guid(id)));
     }
 
     [HttpPost("CreateUser")]
@@ -196,11 +202,12 @@ public class UserController : ControllerBase
         }
 
         //user.Country = country;
+        user.UserType = UserType.User;
         var result = await _usersUnitOfWork.AddUserAsync(user, model.Password);
 
         if (result.Succeeded)
         {
-            await _usersUnitOfWork.AddUserToRoleAsync(user, user.UserType.ToString());
+            await _usersUnitOfWork.AddUserToRoleAsync(user, UserType.User.ToString());
             var response = await SendConfirmationEmailAsync(user, model.Language);
             if (response.WasSuccess)
             {
@@ -212,6 +219,24 @@ public class UserController : ControllerBase
 
         return BadRequest(result.Errors.FirstOrDefault());
     }
+
+
+    [HttpPost("ResendConfirmationEmail")]
+    public async Task<IActionResult> ResendConfirmationEmail([FromBody] UserEmailDTO model)
+    {
+
+        var user = await _usersUnitOfWork.GetUserAsync(model.Email??"");
+        var response = await SendConfirmationEmailAsync(user, model.Language??"");
+
+        if (response.WasSuccess)
+        {
+            return Ok(response);
+        }
+
+        return BadRequest(response.Message);
+
+    }
+
 
     [HttpPost("Login")]
     public async Task<IActionResult> LoginAsync([FromBody] LoginDTO model)
@@ -232,8 +257,8 @@ public class UserController : ControllerBase
         {
             return BadRequest("ERR008");
         }
-
-        return BadRequest("ERR006");
+        
+        return  Ok(result);
     }
 
     [HttpGet("ConfirmEmail")]
@@ -252,7 +277,10 @@ public class UserController : ControllerBase
             return BadRequest(result.Errors.FirstOrDefault());
         }
 
-        return NoContent();
+
+        var baseUrl = _configuration["UrlFrontend"]; // URL base del frontend
+        var tokenLink = $"http://{baseUrl}/verified-account?userid={userId}";
+        return Redirect(tokenLink);
     }
 
     private async Task<ActionResponse<string>> SendRecoverEmailAsync(User user, string language)
@@ -280,7 +308,7 @@ public class UserController : ControllerBase
         {
             userid = user.Id,
             token = myToken
-        }, HttpContext.Request.Scheme, _configuration["UrlFrontend"]);
+        }, HttpContext.Request.Scheme, _configuration["UrlBackend"]);
 
         if (language == "es")
         {
@@ -291,13 +319,16 @@ public class UserController : ControllerBase
 
     private TokenDTO BuildToken(User user)
     {
+       
         var claims = new List<Claim>
             {
                 new(ClaimTypes.Name, user.Email!),
                 new(ClaimTypes.Role, user.UserType.ToString()),
                 new("FirstName", user.FirstName),
                 new("LastName", user.LastName),
-                new("Photo", user.Photo ?? string.Empty)
+                new("Photo", user.Photo ?? string.Empty),
+                new("Id", user.Id ?? string.Empty),
+                new("Rol",user.UserType.ToString() )
                 //TODO:Departament
                 //new("DepartamentId", user.Departament.Id.ToString())
             };
