@@ -1,6 +1,7 @@
 ﻿using SharedLibrary.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using System.Diagnostics.Metrics;
 
 namespace UserService.Data;
 
@@ -10,12 +11,9 @@ public class DataContext : IdentityDbContext<User>, IDataConext
     {
     }
 
-    //public DbSet<Country> Countries { get; set; }
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
-        //modelBuilder.Entity<Country>().HasIndex(x => x.Name).IsUnique();
     }
 
     private void DisableCascadingDelete(ModelBuilder modelBuilder)

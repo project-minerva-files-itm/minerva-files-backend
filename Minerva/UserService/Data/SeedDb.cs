@@ -20,7 +20,7 @@ public class SeedDb
     {
         await _context.Database.EnsureCreatedAsync();
         await CheckRolesAsync();
-        await CheckUserAsync("admin", "minerva", "minerva@yopmail.com", "302 424 1107", UserType.Admin);
+        await CheckUserAsync("admin", "minerva", "minerva@yopmail.com", "302 424 1107", UserType.Admin, 01);
     }
 
     private async Task CheckRolesAsync()
@@ -29,13 +29,13 @@ public class SeedDb
         await _usersUnitOfWork.CheckRoleAsync(UserType.User.ToString());
     }
 
-    private async Task<User> CheckUserAsync(string firstName, string lastName, string email, string phone, UserType userType)
+    private async Task<User> CheckUserAsync(string firstName, string lastName, string email, string phone, UserType userType, int departmen)
     {
         var user = await _usersUnitOfWork.GetUserAsync(email);
         if (user == null)
         {
             //Todo: implmenetar departament
-            //var departament = await _context.Departament.FirstOrDefaultAsync(x => x.Name == "G_General");
+
             user = new User
             {
                 FirstName = firstName,
@@ -43,7 +43,7 @@ public class SeedDb
                 Email = email,
                 UserName = email,
                 PhoneNumber = phone,
-                //departament = departament!,
+                DepartmentId = departmen,
                 UserType = userType,
             };
 
