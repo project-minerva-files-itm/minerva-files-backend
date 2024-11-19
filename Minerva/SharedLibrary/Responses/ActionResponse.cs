@@ -1,12 +1,20 @@
-﻿namespace SharedLibrary.Responses
+﻿using Newtonsoft.Json;
+using SharedLibrary.DTOs;
+
+namespace SharedLibrary.Responses
 {
     public class ActionResponse<T>
     {
         public bool WasSuccess { get; private set; } = true;
+
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public string? Message { get; private set; }
         public T? Result { get; private set; }
 
-        private ActionResponse() { }
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public PaginationDTO? Pagination  { get; private set; }
+
+    private ActionResponse() { }
 
         public class ActionResponseBuilder
         {
@@ -30,8 +38,16 @@
                 return this;
             }
 
+            public ActionResponseBuilder SetPagination(PaginationDTO Pagination)
+            {
+                 Pagination.Page++;
+                _response.Pagination = Pagination;
+                return this;
+            }
+
             public ActionResponse<T> Build()
             {
+            
                 return _response;
             }
         }

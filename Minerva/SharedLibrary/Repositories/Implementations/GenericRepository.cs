@@ -1,5 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json;
 using SharedLibrary.Data;
+using SharedLibrary.DTOs;
+using SharedLibrary.Helpers;
 using SharedLibrary.Repositories.Interfaces;
 using SharedLibrary.Responses;
 
@@ -25,7 +29,7 @@ namespace SharedLibrary.Repositories.Implementations
             try
             {
                 await _context.SaveAsync();
-                return  new ActionResponse<T>.ActionResponseBuilder().SetResult(entity).Build();
+                return  new ActionResponse<T>.ActionResponseBuilder().SetMessage("Saved record").SetResult(entity).Build();
      
             }
             catch (DbUpdateException)
@@ -50,7 +54,7 @@ namespace SharedLibrary.Repositories.Implementations
             {
                 _entity.Remove(row);
                 await _context.SaveAsync();
-                return new ActionResponse<T>.ActionResponseBuilder().Build();
+                return new ActionResponse<T>.ActionResponseBuilder().SetMessage("Deleted record").Build();
              
             }
             catch
@@ -71,6 +75,27 @@ namespace SharedLibrary.Repositories.Implementations
 
         }
 
+        public virtual async Task<ActionResponse<IEnumerable<T>>> GetAsync(PaginationDTO pagination)
+        {
+            var queryable = _entity.AsQueryable();
+
+            if (pagination.Filter!=null) {
+               queryable= queryable.GetFilteredDataAsync(pagination.Filter??"");
+            }
+
+            var result = await queryable.Paginate(pagination).ToListAsync();
+
+            if (pagination.Total=="") {
+                pagination.Total= await GetTotalRecordsAsync();
+            }
+
+            if (!result.IsNullOrEmpty()) {
+                return new ActionResponse<IEnumerable<T>>.ActionResponseBuilder().SetPagination(pagination).SetResult(result).Build();
+            }
+
+             return new ActionResponse<IEnumerable<T>>.ActionResponseBuilder().SetMessage("ERR001").Build();
+        }
+
         public virtual async Task<ActionResponse<IEnumerable<T>>> GetAsync()
         {
             return new ActionResponse<IEnumerable<T>>.ActionResponseBuilder()
@@ -83,7 +108,7 @@ namespace SharedLibrary.Repositories.Implementations
             {
                 _context.UpdateEntity(entity);
                 await _context.SaveAsync();
-                return new ActionResponse<T>.ActionResponseBuilder().SetResult(entity).Build();
+                return new ActionResponse<T>.ActionResponseBuilder().SetMessage("Updated record").SetResult(entity).Build();
                
             }
             catch (DbUpdateException)
@@ -96,34 +121,12 @@ namespace SharedLibrary.Repositories.Implementations
             }
         }
 
-        /*
-        
 
-        public virtual async Task<ActionResponse<IEnumerable<T>>> GetAsync(PaginationDTO pagination)
+        private  async Task<string> GetTotalRecordsAsync()
         {
             var queryable = _entity.AsQueryable();
-
-            return new ActionResponse<IEnumerable<T>>
-            {
-                WasSuccess = true,
-                Result = await queryable
-                    .Paginate(pagination)
-                    .ToListAsync()
-            };
+            return (await queryable.CountAsync()).ToString();
         }
-
-        public virtual async Task<ActionResponse<int>> GetTotalRecordsAsync()
-        {
-            var queryable = _entity.AsQueryable();
-            double count = await queryable.CountAsync();
-            return new ActionResponse<int>
-            {
-                WasSuccess = true,
-                Result = (int)count
-            };
-        }
-
-        */
 
         private ActionResponse<T> ExceptionActionResponse(Exception exception)
         {
@@ -134,6 +137,10 @@ namespace SharedLibrary.Repositories.Implementations
         {
             return new ActionResponse<T>.ActionResponseBuilder().SetMessage("ERR003").Build();
         }
-        
+
+      
+
+       
+
     }
 }

@@ -604,7 +604,7 @@
     <value>Seleccione una fecha...</value>
   </data>
   <data name="SelectFile" xml:space="preserve">
-    <value>Seleccione un archivo...</value>
+    <value>Seleccione una archivo...</value>
   </data>
   <data name="SelectTime" xml:space="preserve">
     <value>Seleccione una hora...</value>
@@ -683,5 +683,17 @@
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Sí</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Ubicación</value>
+  </data>
+  <data name="Departament" xml:space="preserve">
+    <value>Departamento</value>
+  </data>
+  <data name="UserId" xml:space="preserve">
+    <value>UserId</value>
+  </data>
+  <data name="ValidUserId" xml:space="preserve">
+    <value>Usuario ID es obligatorio</value>
   </data>
 </root>

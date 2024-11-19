@@ -17,11 +17,20 @@ namespace SettingsService.Data
 
         public DbSet<ActivityState> ActivityStates { get; set; }
 
+        public DbSet<Department> Departments { get; set; }
+
+        public DbSet<DocumentType> DocumentTypes { get; set; }
+
+        public DbSet<ActivityType> ActivityTypes { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<RequestType>().HasIndex(x => x.Name).IsUnique();
             modelBuilder.Entity<ActivityState>().HasIndex(x => x.Name).IsUnique();
+            modelBuilder.Entity<Department>().HasIndex(x => x.Name).IsUnique();
+            modelBuilder.Entity<DocumentType>().HasIndex(x => x.Name).IsUnique();
+            modelBuilder.Entity<ActivityType>().HasIndex(x => x.Name).IsUnique();
             DisableCascadingDelete(modelBuilder);
         }
 
@@ -33,7 +42,6 @@ namespace SettingsService.Data
                 relationship.DeleteBehavior = DeleteBehavior.Restrict;
             }
         }
-
 
         public void AddEntity<T>(T entity) where T : class
         {
@@ -49,7 +57,5 @@ namespace SettingsService.Data
         {
             return await base.SaveChangesAsync(cancellationToken);
         }
-
-      
     }
 }
