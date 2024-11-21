@@ -26,8 +26,4 @@ public class User : IdentityUser
 
     [Display(Name = "User", ResourceType = typeof(Literals))]
     public string FullName => $"{FirstName} {LastName}";
-
-    public Department? Department { get; set; } = null!;
-
-    public int? DepartmentId { get; set; }
 }

@@ -1,5 +1,4 @@
-﻿using SettingsService.Migrations;
-using SettingsService.Repositories.Interfaces;
+﻿using SettingsService.Repositories.Interfaces;
 using SettingsService.UnitsOfWork.Interfaces;
 using SharedLibrary.DTOs;
 using SharedLibrary.Entities;
@@ -9,11 +8,11 @@ using SharedLibrary.UnitsOfWork.Implementations;
 
 namespace SettingsService.UnitsOfWork.Implementations;
 
-public class DepartmentUnitOfWork : GenericUnitOfWork<Departament>, IDepartmentUnitOfWork
+public class DepartmentUnitOfWork : GenericUnitOfWork<Department>, IDepartmentUnitOfWork
 {
     private readonly IDepartmentRepository _departmentRepository;
 
-    public DepartmentUnitOfWork(IGenericRepository<Departament> repository, IDepartmentRepository departmentRepository) : base(repository)
+    public DepartmentUnitOfWork(IGenericRepository<Department> repository, IDepartmentRepository departmentRepository) : base(repository)
     {
         _departmentRepository = departmentRepository;
     }

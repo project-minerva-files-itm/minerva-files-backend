@@ -9,12 +9,13 @@ using SharedLibrary.Repositories.Implementations;
 using SharedLibrary.Repositories.Interfaces;
 using SharedLibrary.UnitsOfWork.Implementations;
 using SharedLibrary.UnitsOfWork.Interfaces;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -61,6 +62,8 @@ builder.Services.AddScoped<IDocumentTypeUnitOfWork, DocumentTypeUnitOfWork>();
 builder.Services.AddScoped<IActivityTypeRepository, ActivityTypeRepository>();
 builder.Services.AddScoped<IActivityTypeUnitOfWork, ActivityTypeUnitOfWork>();
 
+builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+builder.Services.AddScoped<IEmployeeUnitOfWork, EmployeeUnitOfWork>();
 
 var app = builder.Build();
 
