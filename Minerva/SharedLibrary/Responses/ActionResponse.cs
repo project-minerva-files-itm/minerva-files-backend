@@ -9,12 +9,14 @@ namespace SharedLibrary.Responses
 
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public string? Message { get; private set; }
+
         public T? Result { get; private set; }
 
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public PaginationDTO? Pagination  { get; private set; }
+        public PaginationDTO? Pagination { get; private set; }
 
-    private ActionResponse() { }
+        public ActionResponse()
+        { }
 
         public class ActionResponseBuilder
         {
@@ -40,14 +42,13 @@ namespace SharedLibrary.Responses
 
             public ActionResponseBuilder SetPagination(PaginationDTO Pagination)
             {
-                 Pagination.Page++;
+                Pagination.Page++;
                 _response.Pagination = Pagination;
                 return this;
             }
 
             public ActionResponse<T> Build()
             {
-            
                 return _response;
             }
         }

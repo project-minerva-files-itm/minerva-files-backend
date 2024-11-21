@@ -696,4 +696,13 @@
   <data name="ValidUserId" xml:space="preserve">
     <value>Usuario ID es obligatorio</value>
   </data>
+  <data name="Department" xml:space="preserve">
+    <value>Departamento</value>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>Cargo</value>
+  </data>
+  <data name="HireDate" xml:space="preserve">
+    <value>Fecha de contratación</value>
+  </data>
 </root>

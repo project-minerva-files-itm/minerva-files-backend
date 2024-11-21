@@ -696,4 +696,13 @@
   <data name="ValidUserId" xml:space="preserve">
     <value>User ID is required</value>
   </data>
+  <data name="Department" xml:space="preserve">
+    <value>Department</value>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="HireDate" xml:space="preserve">
+    <value>HireDate</value>
+  </data>
 </root>

@@ -43,7 +43,6 @@ public class SeedDb
                 Email = email,
                 UserName = email,
                 PhoneNumber = phone,
-                DepartmentId = departmen,
                 UserType = userType,
             };
 

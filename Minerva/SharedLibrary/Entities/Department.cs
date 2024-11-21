@@ -32,6 +32,7 @@ namespace SharedLibrary.Entities
         [Display(Name = "UpdatedAt", ResourceType = typeof(Literals))]
         public DateTime UpdatedAt { get; set; }
 
-        public ICollection<User>? Users { get; set; }
+        [Display(Name = "LastUser", ResourceType = typeof(Literals))]
+        public string LastUser { get; set; } = string.Empty;
     }
 }
