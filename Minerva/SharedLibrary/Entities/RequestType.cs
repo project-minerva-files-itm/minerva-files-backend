@@ -17,6 +17,20 @@ public class RequestType
     [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(Literals))]
     public string Description { get; set; } = null!;
 
+
+
+    [Display(Name = "TypeCorrespondence", ResourceType = typeof(Literals))]
+    [MaxLength(20, ErrorMessageResourceName = "MaxLength", ErrorMessageResourceType = typeof(Literals))]
+    [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(Literals))]
+    public string TypeCorrespondence { get; set; } = null!;
+
+
+    [Display(Name = "CommonUse", ResourceType = typeof(Literals))]
+    [MaxLength(255, ErrorMessageResourceName = "MaxLength", ErrorMessageResourceType = typeof(Literals))]
+    [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(Literals))]
+    public string CommonUse { get; set; } = null!;
+
+
     [Display(Name = "Manager", ResourceType = typeof(Literals))]
     [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(Literals))]
     public bool IsActive { get; set; }
