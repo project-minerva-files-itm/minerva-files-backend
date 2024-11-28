@@ -187,6 +187,15 @@ namespace SharedLibrary.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Attachments.
+        /// </summary>
+        public static string Attachments {
+            get {
+                return ResourceManager.GetString("Attachments", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Author.
         /// </summary>
         public static string Author {
@@ -1438,6 +1447,15 @@ namespace SharedLibrary.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Request Type.
+        /// </summary>
+        public static string RequestType {
+            get {
+                return ResourceManager.GetString("RequestType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Request Types.
         /// </summary>
         public static string RequestTypes {
@@ -1614,6 +1632,15 @@ namespace SharedLibrary.Resources {
         public static string Status {
             get {
                 return ResourceManager.GetString("Status", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Subject.
+        /// </summary>
+        public static string Subject {
+            get {
+                return ResourceManager.GetString("Subject", resourceCulture);
             }
         }
         
