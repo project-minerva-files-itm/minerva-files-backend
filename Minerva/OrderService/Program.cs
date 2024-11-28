@@ -1,5 +1,13 @@
 using OrderService.Data;
+using OrderService.Repositories.Implementations;
+using OrderService.Repositories.Interfaces;
+using OrderService.UnitsOfWork.Implementations;
+using OrderService.UnitsOfWork.Interfaces;
 using SharedLibrary.Data;
+using SharedLibrary.Repositories.Implementations;
+using SharedLibrary.Repositories.Interfaces;
+using SharedLibrary.UnitsOfWork.Implementations;
+using SharedLibrary.UnitsOfWork.Interfaces;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -31,6 +39,12 @@ builder.Services.AddDbContext<DataContext>((serviceProvider, options) =>
 });
 
 #endregion Configure database
+
+builder.Services.AddScoped(typeof(IGenericUnitOfWork<>), typeof(GenericUnitOfWork<>));
+builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+
+builder.Services.AddScoped<IRequestRepository, RequestRepository>();
+builder.Services.AddScoped<IRequestUnitOfWork, RequestUnitOfWork>();
 
 var app = builder.Build();
 

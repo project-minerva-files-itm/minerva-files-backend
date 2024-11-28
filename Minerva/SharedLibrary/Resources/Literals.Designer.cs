@@ -187,6 +187,15 @@ namespace SharedLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Attachments.
+        /// </summary>
+        public static string Attachments {
+            get {
+                return ResourceManager.GetString("Attachments", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Author.
         /// </summary>
         public static string Author {
@@ -1411,6 +1420,15 @@ namespace SharedLibrary.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Request Type.
+        /// </summary>
+        public static string RequestType {
+            get {
+                return ResourceManager.GetString("RequestType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Field {0} is required..
         /// </summary>
         public static string RequiredField {
@@ -1560,6 +1578,15 @@ namespace SharedLibrary.Resources {
         public static string Status {
             get {
                 return ResourceManager.GetString("Status", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Subject.
+        /// </summary>
+        public static string Subject {
+            get {
+                return ResourceManager.GetString("Subject", resourceCulture);
             }
         }
         
