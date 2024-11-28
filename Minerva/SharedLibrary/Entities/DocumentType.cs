@@ -12,11 +12,40 @@ public class DocumentType
     [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(Literals))]
     public string Name { get; set; } = null!;
 
+    [Display(Name = "RequestTypes", ResourceType = typeof(Literals))]
+    [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(Literals))]
+    public int RequestTypesId { get; set; }=0;
+
+
+    [Display(Name = "TypeDocument", ResourceType = typeof(Literals))]
+    [MaxLength(50, ErrorMessageResourceName = "MaxLength", ErrorMessageResourceType = typeof(Literals))]
+    [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(Literals))]
+    public string TypeDocument { get; set; } = null!;
+
+    [Display(Name = "StartDate", ResourceType = typeof(Literals))]
+    [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(Literals))]
+    public DateTime? StartDate { get; set; } = null!;
+
+    [Display(Name = "EndDate", ResourceType = typeof(Literals))]
+    public DateTime? EndDate { get; set; } = null!;
+
+
+    [Display(Name = "Size", ResourceType = typeof(Literals))]
+    [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(Literals))]
+    public int Size { get; set; } = 0;
+
+
     [Display(Name = "Description", ResourceType = typeof(Literals))]
     [MaxLength(255, ErrorMessageResourceName = "MaxLength", ErrorMessageResourceType = typeof(Literals))]
     [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(Literals))]
     public string Description { get; set; } = null!;
 
+    [Display(Name = "Link", ResourceType = typeof(Literals))]
+    [MaxLength(500, ErrorMessageResourceName = "MaxLength", ErrorMessageResourceType = typeof(Literals))]
+    [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(Literals))]
+    public string Link { get; set; } = null!;
+
+    
     [Display(Name = "Manager", ResourceType = typeof(Literals))]
     [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(Literals))]
     public bool IsActive { get; set; }

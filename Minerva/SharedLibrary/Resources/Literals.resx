@@ -705,6 +705,30 @@
   <data name="HireDate" xml:space="preserve">
     <value>HireDate</value>
   </data>
+  <data name="CommonUse" xml:space="preserve">
+    <value>Common Use</value>
+  </data>
+  <data name="TypeCorrespondence" xml:space="preserve">
+    <value>Correspondence Type</value>
+  </data>
+  <data name="Link" xml:space="preserve">
+    <value>Link</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+  <data name="TypeDocument" xml:space="preserve">
+    <value>Type of Document</value>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>Fecha Final</value>
+  </data>
+	<data name="RequestTypes" xml:space="preserve">
+    <value>Request Types</value>
+	</data>
   <data name="Subject" xml:space="preserve">
     <value>Subject</value>
   </data>
