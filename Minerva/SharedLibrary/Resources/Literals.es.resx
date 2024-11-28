@@ -705,4 +705,13 @@
   <data name="HireDate" xml:space="preserve">
     <value>Fecha de contratación</value>
   </data>
+  <data name="Subject" xml:space="preserve">
+    <value>Asunto</value>
+  </data>
+  <data name="Attachments" xml:space="preserve">
+    <value>Documentos Adjuntos</value>
+  </data>
+  <data name="RequestType" xml:space="preserve">
+    <value>Tipo de solicitud</value>
+  </data>
 </root>
