@@ -18,4 +18,4 @@ EXPOSE 80
 # Copiar los archivos publicados desde la fase de construcción
 COPY --from=build /app/publish .
 
-ENTRYPOINT ["dotnet", "TuAplicacion.dll"]
+ENTRYPOINT ["dotnet", "UserService.dll"]
