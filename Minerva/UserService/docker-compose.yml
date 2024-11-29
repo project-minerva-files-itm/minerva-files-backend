@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+    backend:
+        container_name: Minerva-Auth
+        restart: always
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        ports:
+            - 8083:80
+        networks:
+            - instancia_local
+            
+networks: 
+    instancia_local:
+        name: instancia_local
+        driver: bridge
