@@ -726,8 +726,9 @@
   <data name="EndDate" xml:space="preserve">
     <value>Fecha Final</value>
   </data>
-	<data name="RequestTypes" xml:space="preserve">
-</data>
+  <data name="RequestTypes" xml:space="preserve">
+    <value>Tipo de solicitud</value>
+  </data>
   <data name="Subject" xml:space="preserve">
     <value>Asunto</value>
   </data>
@@ -735,7 +736,6 @@
     <value>Documentos Adjuntos</value>
   </data>
   <data name="RequestType" xml:space="preserve">
-
     <value>Tipo de solicitud</value>
   </data>
 </root>
