@@ -79,6 +79,15 @@ namespace SharedLibrary.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Accounts.
+        /// </summary>
+        public static string Accounts {
+            get {
+                return ResourceManager.GetString("Accounts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Actions.
         /// </summary>
         public static string Actions {
@@ -1443,6 +1452,15 @@ namespace SharedLibrary.Resources {
         public static string Remarks {
             get {
                 return ResourceManager.GetString("Remarks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Request.
+        /// </summary>
+        public static string Request {
+            get {
+                return ResourceManager.GetString("Request", resourceCulture);
             }
         }
         

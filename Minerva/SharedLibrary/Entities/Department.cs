@@ -20,7 +20,16 @@ namespace SharedLibrary.Entities
         [Display(Name = "Location", ResourceType = typeof(Literals))]
         [MaxLength(100, ErrorMessageResourceName = "MaxLength", ErrorMessageResourceType = typeof(Literals))]
         [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(Literals))]
+
         public string Location { get; set; } = null!;
+
+
+        [Display(Name = "Phone", ResourceType = typeof(Literals))]
+        [MaxLength(100, ErrorMessageResourceName = "MaxLength", ErrorMessageResourceType = typeof(Literals))]
+        [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(Literals))]
+
+        public string Phone { get; set; } = null!;
+
 
         [Display(Name = "Manager", ResourceType = typeof(Literals))]
         [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(Literals))]

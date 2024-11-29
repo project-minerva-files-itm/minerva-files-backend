@@ -738,4 +738,10 @@
   <data name="RequestType" xml:space="preserve">
     <value>Request Type</value>
   </data>
+  <data name="Accounts" xml:space="preserve">
+    <value>Accounts</value>
+  </data>
+  <data name="Request" xml:space="preserve">
+    <value>Request</value>
+  </data>
 </root>
