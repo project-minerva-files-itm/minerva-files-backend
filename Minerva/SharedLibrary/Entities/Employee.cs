@@ -61,7 +61,7 @@ public class Employee
     public string LastUser { get; set; } = string.Empty;
 
     [Display(Name = "User", ResourceType = typeof(Literals))]
-    [MaxLength(450, ErrorMessageResourceName = "MaxLength", ErrorMessageResourceType = typeof(Literals))]
-    [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(Literals))]
+    //[MaxLength(450, ErrorMessageResourceName = "MaxLength", ErrorMessageResourceType = typeof(Literals))]
+    //[Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(Literals))]
     public string UserId { get; set; } = null!;
 }

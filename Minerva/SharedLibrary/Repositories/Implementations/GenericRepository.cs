@@ -77,6 +77,7 @@ namespace SharedLibrary.Repositories.Implementations
 
         public virtual async Task<ActionResponse<IEnumerable<T>>> GetAsync(PaginationDTO pagination)
         {
+            
             var queryable = _entity.AsQueryable();
 
             if (pagination.Filter!=null) {
